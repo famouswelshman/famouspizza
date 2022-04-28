@@ -26,11 +26,63 @@ Pizza Time
 
 # Main Technologies
 
-Required: HTML, CSS, JavaScript, Python+Django
+### Required: 
+HTML, CSS, JavaScript, Python+Django
 Relational Database(Recommending MySQL)
 Stripe Payments
 
-Optional
+### Optional
 Bootstrap material design
 Materialize (Pre built page layout)
 Royalty free web content
+
+# User Stories
+* 
+*
+*
+*
+*
+
+### User Story 1
+
+
+
+
+### User Story 2
+
+
+### User Story 3
+
+
+### User Story 4
+
+
+# Structure
+
+
+
+# Website UX
+
+## Features
+
+
+### Nice to have Features
+
+## Future Features
+
+# MS4 Wireframes - Balsamic
+
+## Desktop Home Page Template
+![wireframe1]()
+
+## Desktop Open Review Page Template
+![wireframe2]()
+
+## Medium Media Open Review Page Template
+![wireframe3]()
+
+## Mobile Open Review Page Template
+![wireframe7]()
+
+# Database Schema (MongoDB)
+![MongoDB_schematic](https://github.com/famouswelshman/reviews-16bit/blob/main/static/wireframes/MongoDB_Schematic.jpg)
