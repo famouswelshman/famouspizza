@@ -56,12 +56,14 @@ Royalty free web content
 
 ### User Story 4
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Structure
 
 
 
 # Website UX
+
 
 ## Features
 
@@ -75,14 +77,92 @@ Royalty free web content
 ## Desktop Home Page Template
 ![wireframe1]()
 
-## Desktop Open Review Page Template
+## Desktop Products Page Template
 ![wireframe2]()
 
-## Medium Media Open Review Page Template
+## User Login and sign up Template
 ![wireframe3]()
 
-## Mobile Open Review Page Template
+## Checkout cart and payments Template
 ![wireframe7]()
 
-# Database Schema (MongoDB)
-![MongoDB_schematic](https://github.com/famouswelshman/reviews-16bit/blob/main/static/wireframes/MongoDB_Schematic.jpg)
+---------------------------------------------------------------------------------------------------
+
+
+# VALIDATION
+
+# Code Validation
+## HTML
+HTML code for all pages passed through W3C Markup Checker shows some warnings and errors in relation to Jinja templating. I have also been made aware of some divs which
+remain open but closing these completely corrupts the display of the containers, something I learnt late in the project before submit.
+
+## CSS
+
+
+## Javascript
+
+
+--------------------------------------------------------------------------------------------------------
+
+# Testing
+
+## Bugs
+
+
+## Account creation
+
+
+## Functionality
+
+
+## HTML
+
+
+## CSS
+
+
+## Javascript
+
+## Django
+
+# Project Challenges
+>
+>
+>
+>
+
+
+# Deployment
+
+## Github
+
+
+# Gitpod
+
+
+## Heroku
+
+
+
+
+# Media Credits
+
+
+
+# Other Credits
+StartBootstrap - E-Commerce template downloaded and customized for project
+
+
+
+## Libraries used
+* Django / MySQL Database
+* Bootstrap used for content styling.
+* Font Awesome for font and symbols.
+* StartBootrstrap used for pre-built page layouts.
+* Jquery (Javascript) included in the project for front end animation of buttons and navbar, dropdown etc.
+* GitHub used for Git version control and Gitpod was used for IDE.
+* Heroku used for deplyment of the application.
+
+
+
+
