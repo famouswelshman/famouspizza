@@ -37,22 +37,23 @@ Materialize (Pre built page layout)
 Royalty free web content
 
 # User Stories
-* 
-*
-*
-*
-*
+* User can view all products
+* New visitors want to be able to search for deals and exact products
+* Users want to register their details and create an account
+* User wants to add or remove items 
+* User wants to view all products in checkout cart
+* Registered Users want to complete payment of products for delivery service
 
 ### User Story 1
-
-
+New to site users can view all pizza product content by navigating product pages. Products will be associated by category and display their size, quantity and price. 
 
 
 ### User Story 2
-
+User can setup an account via registration link which enables the customer to add or remove products from their checkout cart. Product information is restricted to the current customer and cannot be viewed by other account registered users. Registered users account details will be secure to their account.
+Registered user can edit and delete their profile details. Registered user can logout of their account until next login.
 
 ### User Story 3
-
+Registered user can select item, remove or update their order and visit their cart for checkout.The user can then process payment of their order.
 
 ### User Story 4
 
@@ -147,10 +148,15 @@ remain open but closing these completely corrupts the display of the containers,
 
 # Media Credits
 
+# Credits
+Pizza Background Picture
+Photo by Eneida Nieves: https://www.pexels.com/photo/baked-pizza-on-pizza-peel-in-oven-905847/
 
 
-# Other Credits
+## Other Credits
 StartBootstrap - E-Commerce template downloaded and customized for project
+
+
 
 
 
