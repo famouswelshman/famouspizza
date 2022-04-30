@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/main_background_pic.jpg') no-repeat center center fixed;
+    background: url('/media/main_background_pic_dark.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -16,7 +16,7 @@ body {
 
 .tagline {
     font-family: 'Comfortaa', cursive;
-    font-size: 150px;
+    font-size: 100px;
     color: white;
     margin: auto;
     text-align: center;
