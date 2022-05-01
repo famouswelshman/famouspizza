@@ -155,7 +155,7 @@ Photo by Eneida Nieves: https://www.pexels.com/photo/baked-pizza-on-pizza-peel-i
 
 ## Other Credits
 StartBootstrap - E-Commerce template downloaded and customized for project
-
+Google Fonts - Comfortaa Font for main website font styling
 
 
 

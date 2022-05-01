@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-    margin-top: 80px;
+    margin-top: 60px;
     bottom: 500px;
 }
 
@@ -42,4 +42,47 @@ body {
 .col {
     text-align: center;
     padding: 40px;
+}
+
+/*---------------------- Media Sizing ------------------------*/
+
+@media (min-width: 310px)  {
+.tagline {
+    font-family: 'Comfortaa', cursive;
+    font-size: 50px;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    }
+}
+
+@media (min-width: 568px)  {
+.tagline {
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    }
+}
+
+@media (min-width: 736px)  {
+.tagline {
+    font-family: 'Comfortaa', cursive;
+    font-size: 80px;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    }
+}
+
+@media (min-width: 992px)  {
+.tagline {
+    font-family: 'Comfortaa', cursive;
+    font-size: 100px;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    display: inline-flex;
+    }
 }
