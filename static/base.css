@@ -10,6 +10,10 @@ body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
+p {
+    color: white;
+}
+
 .button1 {
     top: 500px;
 }
@@ -31,6 +35,10 @@ body {
 .card-img-top {
     height: 100px;
     width: 100px;
+}
+
+.card-body {
+    text-align: center;
 }
 
 .container {
