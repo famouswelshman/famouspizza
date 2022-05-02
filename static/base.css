@@ -23,6 +23,16 @@ body {
     display: inline-flex;
 }
 
+.page-title {
+    color: antiquewhite;
+    text-align: center;
+}
+
+.card-img-top {
+    height: 100px;
+    width: 100px;
+}
+
 .container {
     margin-top: 60px;
     bottom: 500px;
@@ -42,6 +52,16 @@ body {
 .col {
     text-align: center;
     padding: 40px;
+}
+/*------------------------ Products Page Overlay ------------------------*/
+
+.products-overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: -1;
 }
 
 /*---------------------- Media Sizing ------------------------*/
