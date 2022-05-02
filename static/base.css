@@ -41,6 +41,11 @@ p {
     text-align: center;
 }
 
+.card-img-top {
+    height: auto;
+    width: auto;
+}
+
 .container {
     margin-top: 60px;
     bottom: 500px;
@@ -61,6 +66,22 @@ p {
     text-align: center;
     padding: 40px;
 }
+
+.product-detail-title {
+    font-family: 'Comfortaa', cursive;
+    font-size: 80px;
+    text-align: left;
+    color: white;
+    margin: auto;
+    display: inline-flex;
+}
+
+.product-detail-price {
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 35px;
+}
+
 /*------------------------ Products Page Overlay ------------------------*/
 
 .products-overlay {
