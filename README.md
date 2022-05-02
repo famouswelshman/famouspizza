@@ -162,7 +162,7 @@ Google Fonts - Comfortaa Font for main website font styling
 
 ## Libraries used
 * Django / MySQL Database
-* Bootstrap used for content styling.
+* Bootstrap used for content styling. (HTML/Js & css)
 * Font Awesome for font and symbols.
 * StartBootrstrap used for pre-built page layouts.
 * Jquery (Javascript) included in the project for front end animation of buttons and navbar, dropdown etc.
