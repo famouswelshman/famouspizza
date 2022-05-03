@@ -22,11 +22,11 @@
                     <br>
                     <br>
                     <div class="col-md-4">
-                        <a href="{{ product.image.url }}" target="_blank">
-                        <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}" /></a></div>
+                     
+                        <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}" /></div>
                         
                     {% else %}
-                        <a href="">
+                        <a href="{% url 'product_detail' product_id">
                         <img class="card-img-top img-fluid" src="[[ MEDIA_URL }}noimage.png" alt="{{ product.name }}" />
                     
                     {% endif %}
