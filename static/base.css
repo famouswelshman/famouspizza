@@ -55,8 +55,7 @@ p {
 }
 
 .container {
-    margin-top: 60px;
-    bottom: 500px;
+    margin-top: 0px;
 }
 
 .container2 {
@@ -72,7 +71,7 @@ p {
 
 .col {
     text-align: center;
-    padding: 40px;
+    color: white;
 }
 
 .product-detail-title {
@@ -100,6 +99,15 @@ p {
     font-size: larger;
 }
 
+.py-5 bg-dark {
+    position: fixed;
+}
+
+.footer {
+    color: aliceblue;
+    padding-top: 100px;
+    width: 100%;
+}
 
 /*------------------------ Products Page Overlay ------------------------*/
 
