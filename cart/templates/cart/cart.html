@@ -42,9 +42,16 @@
          <table>
            <thead>
              <tr>
+            {% if cart_items %}
              <th><strong>Product</strong></th>
+            {% else %}
+            <p class="lead mb-5">Your Cart is currently empty.</p>
+                <a href="{% url 'products' %}">
              <th><strong>Price</strong></th>
-           </tr>
+            </a>
+            {% endif %}
+           
+        </tr>
            </thead>
            <tbody id="carttable">
            </tbody>
