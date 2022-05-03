@@ -4,15 +4,23 @@
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col"></div>
+                <h1 class="page-title"></h1>
+                {% for c in current_categories %}
+                <div class="category-box">
+                    <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                        <button type="button" class="btn btn-secondary btn-lg">{{ c.friendly_name }}</button>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
   
-                <h1 class="page-title">All our wonderful Pizzas</h1>
-                <hr class="w-50 mb-1">
+                
+               
          
         <div class="row">
             <div class="product-container col-10 offset-1">
@@ -46,7 +54,7 @@
 
                                         {% if product.category %}
                                         <a href="{% url 'products' %}?category={{ product.category.name }}">
-                                            <i class="fa-solid fa-steak"></i>{{ product.category.friendly_name }}
+                                            <i class="fas fa-pizza-slice"></i><br>{{ product.category.friendly_name }}
                                         </a>
                                         {% endif %}
                                         

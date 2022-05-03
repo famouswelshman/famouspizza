@@ -84,7 +84,7 @@ p {
 
 .buy-button {
     padding-bottom: 25px;
-    padding-top: 50px;
+    padding-top: 10px;
 }
 
 .message-container {
@@ -105,8 +105,35 @@ p {
 }
 
 .category {
-    font-size: 20px;
+    font-size: 30px;
 }
+
+.category-box {
+    text-align: center;
+}
+
+/* unvisited link */
+a:link {
+    color: red;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+
 
 /*---------------------- Media Sizing ------------------------*/
 
