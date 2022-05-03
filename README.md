@@ -169,6 +169,7 @@ Font Awesome - Logos and links
 * Jquery (Javascript) included in the project for front end animation of buttons and navbar, dropdown etc.
 * GitHub used for Git version control and Gitpod was used for IDE.
 * Heroku used for deplyment of the application.
+* Shopping cart template was downloaded from - https://www.codehim.com/
 
 
 
