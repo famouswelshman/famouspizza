@@ -84,6 +84,12 @@ p {
 
 .buy-button {
     padding-bottom: 25px;
+    padding-top: 50px;
+}
+
+.message-container {
+    color: white;
+    font-size: larger;
 }
 
 
@@ -96,6 +102,10 @@ p {
     left: 0;
     background: black;
     z-index: -1;
+}
+
+.category {
+    font-size: 20px;
 }
 
 /*---------------------- Media Sizing ------------------------*/

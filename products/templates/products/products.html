@@ -43,6 +43,13 @@
                                             <small class="text-muted">No Description</small>
                                         {% endif %}
                                     </div>
+
+                                        {% if product.category %}
+                                        <a href="{% url 'products' %}?category={{ product.category.name }}">
+                                            <i class="fa-solid fa-steak"></i>{{ product.category.friendly_name }}
+                                        </a>
+                                        {% endif %}
+                                        
                                     <div class="buy-button">
                                         <a href="{% url 'product_detail' product.id %}">
                                         <button type="button" class="btn btn-secondary btn-sm">Add to Order</button></a>

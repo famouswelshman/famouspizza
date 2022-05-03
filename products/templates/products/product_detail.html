@@ -30,7 +30,8 @@
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" />
                     
                     {% endif %}
-
+                    
+                    
                     <div class="col-md-6">
                         <div class="small mb-3 ">Product Number: {{ product.id }}</div>
                         <div class="product-detail-title">{{ product.name }}</div>
@@ -38,12 +39,21 @@
                         <div class="fs-5 mb-5">
                             <span class="product-detail-price">£{{ product.price }}</span>
                         </div>
+                    
+                    {% if product.category %}
+
+                    <div class="category">
+                        <a href="{% url 'products' %}?category={{ product.category.name }}">
+                            <i class="fa-solid fa-burger-fries"></i>{{ product.category.friendly_name }}</a>
+                        </div>
+                    {% endif %}
+                        
                         <p class="lead">{{ product.description }}</p>
                         <div class="d-flex">
                             <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
                             <button class="btn btn-outline-dark flex-shrink-0" type="button">
                                 <i class="bi-cart-fill me-1"></i>
-                                Add to cart
+                                Add to Order
                             </button>
                         </div>
                     </div>

@@ -151,12 +151,13 @@ remain open but closing these completely corrupts the display of the containers,
 # Credits
 Pizza Background Picture
 Photo by Eneida Nieves: https://www.pexels.com/photo/baked-pizza-on-pizza-peel-in-oven-905847/
+Pizza Variety photos from - https://www.pizzarecipe.org/different-types-of-pizza/
 
 
 ## Other Credits
 StartBootstrap - E-Commerce template downloaded and customized for project
 Google Fonts - Comfortaa Font for main website font styling
-
+Font Awesome - Logos and links
 
 
 
