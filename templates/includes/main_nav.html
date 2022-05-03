@@ -14,12 +14,18 @@
         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'products' %}?category=Deals">Deals</a>
-      </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'products' %}">Menu</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Menu
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=Meat">Meat Eaters</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=Vegetarian">Vegetarian</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=Deals">Deals</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=Extras">Extras</a></li>
+        </ul>
       </li>
 
       <li class="nav-item">
@@ -29,23 +35,37 @@
       <li class="nav-item">
         <a class="nav-link" href="#">My Orders</a>
       </li>
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown link
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-      </li>
     </ul>
+
+    
+
     <form method="GET" action="{% url 'products' %}" class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
-    </div>
-    </div>
+
+    <li class="nav-item">
+      <a class="nav-link" href="#">My Account</a>
+    </li>
+    
+    <li class="list-inline-item">
+      <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+        <div class="text-center">
+        </div><i class="fas fa-shopping-bag fa-lg"></i></div>
+        <p class="my-0">
+          {% if grand_total %}
+            £{{ grand_total|floatformat:2 }}
+          {% else %}
+            £0.00
+          {% endif %}
+        </p>
+      </div>
+      </a>
+      </li>
+      </ul>
+      </div>
+      </div>
+      </div>
+      </div>
     </nav>
 

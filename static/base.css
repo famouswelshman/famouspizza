@@ -82,6 +82,11 @@ p {
     font-size: 35px;
 }
 
+.buy-button {
+    padding-bottom: 25px;
+}
+
+
 /*------------------------ Products Page Overlay ------------------------*/
 
 .products-overlay {

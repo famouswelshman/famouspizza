@@ -43,10 +43,17 @@
                                             <small class="text-muted">No Description</small>
                                         {% endif %}
                                     </div>
+                                    <div class="buy-button">
+                                        <a href="{% url 'product_detail' product.id %}">
+                                        <button type="button" class="btn btn-secondary btn-sm">Add to Order</button></a>
+                                    </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
+                  
+                    
                 {% endfor %}
             </div>
         </div>
