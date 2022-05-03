@@ -6,7 +6,6 @@ from .models import Product
 
 # Create your views here.
 
-
 def all_products(request):
     """ Page to display all products with search function """
 

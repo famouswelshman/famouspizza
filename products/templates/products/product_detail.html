@@ -18,16 +18,16 @@
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
-                    {% if product.image %}
+                    {% if product.image_2 %}
                     <br>
                     <br>
                     <div class="col-md-4">
                      
-                        <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}" /></div>
+                        <img class="card-img-top" src="{{ product.image_2.url }}" alt="{{ product.name }}" /></div>
                         
                     {% else %}
                         <a href="{% url 'product_detail' product_id">
-                        <img class="card-img-top img-fluid" src="[[ MEDIA_URL }}noimage.png" alt="{{ product.name }}" />
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" />
                     
                     {% endif %}
 
