@@ -11,7 +11,6 @@
 
 {% block content %}
   
-        <!-- Product section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
@@ -22,8 +21,6 @@
                     {% endfor %}
 
                     {% if product.image_2 %}
-                    <br>
-                    <br>
                     <div class="col-md-4">
                      
                         <img class="card-img-top" src="{{ product.image_2.url }}" alt="{{ product.name }}" /></div>
@@ -182,12 +179,7 @@
                 </div>
             </div>
         </section>
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
-        </footer>
 
-    
     </body>
 </html>
 
