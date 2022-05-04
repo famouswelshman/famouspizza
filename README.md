@@ -152,6 +152,11 @@ remain open but closing these completely corrupts the display of the containers,
 Pizza Background Picture
 Photo by Eneida Nieves: https://www.pexels.com/photo/baked-pizza-on-pizza-peel-in-oven-905847/
 Pizza Variety photos from - https://www.pizzarecipe.org/different-types-of-pizza/
+Caprina Pizza Image - Photo by Vincent Rivaud: https://www.pexels.com/photo/top-view-photo-of-baked-pizza-2147491/
+Broccolli Pizza Img - https://www.KitchenKonfidence.com & https://www.streaminggourmet.com
+Proscuitto Pizza Img - Photo by Pixabay: https://www.pexels.com/photo/cheese-close-up-cooking-crispy-263041/
+Napolitana Pizza Img - Photo by Victor Miyata: https://www.pexels.com/photo/pizza-on-brown-wooden-table-3682837/
+
 
 
 ## Other Credits
