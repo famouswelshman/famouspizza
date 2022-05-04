@@ -45,11 +45,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-                                        {% if product.description %}
-                                            <small class="text-muted">{{ product.description }}</small>
-                                        {% else %}
-                                            <small class="text-muted">No Description</small>
-                                        {% endif %}
+                                    
                                     </div>
 
                                         {% if product.category %}
@@ -63,15 +59,11 @@
                                         <button type="button" class="btn btn-secondary btn-sm">Add to Order</button></a>
                                     </div>
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
                   
                     
                 {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
+
 {% endblock %}
