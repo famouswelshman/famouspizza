@@ -7,7 +7,7 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1 {
@@ -54,14 +54,16 @@ p {
     width: auto;
 }
 
-.container {
-    margin-top: 0px;
-}
-
 .container2 {
     text-align: center;
     align-items: center;
     padding: 20px;
+}
+
+.container-tagline {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
 }
 
 .row {
@@ -99,15 +101,31 @@ p {
     font-size: larger;
 }
 
-.py-5 bg-dark {
+.footer-container {
     position: fixed;
-}
-
-.footer {
-    color: aliceblue;
-    padding-top: 100px;
+    bottom: 0;
+    height: 100px;
     width: 100%;
 }
+
+.col-left {
+    text-align: left;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+}
+
+.col-middle {
+    text-align: center;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+}
+
+.col-right {
+    text-align: right;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+}
+
 
 /*------------------------ Products Page Overlay ------------------------*/
 
