@@ -57,11 +57,13 @@
              <td><strong>Total</strong></td>
            </tr>
            <tr>
-             <td>x <span id="itemsquantity">0</span></td>
+             <td>{{ item.quantity }}<span id="itemsquantity"></span></td>
             
-             <td>$<span id="total">0</span></td>
+             <td>£<span id="Total">{{ total|floatformat:2 }}</span></td>
+             {% if free_delivery_delta > 0 %}
+             <td>You just need to spend £{{ free_delivery_delta }} more for free delivery.</td>
            </tr></table>
-
+             {% endif %}
            
          <div class="cart-buttons">  
            <button id="emptycart">Empty Cart</button>
