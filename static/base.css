@@ -8,6 +8,9 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: var(--bs-body-text-align);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 h1 {
@@ -42,12 +45,6 @@ p {
 
 .card-body {
     text-align: center;
-}
-
-.card-img-top {
-    margin-top: 65px;
-    height: auto;
-    object-fit: fill;
 }
 
 .container2 {
@@ -123,20 +120,20 @@ p {
     font-family: 'Comfortaa', cursive;
 }
 
-.col-md-4 {
-    width: 100vh;
-    height: 50vh;
-    object-fit: fill;
-}
-
-.py-5, .col-md-6 {
-    height: auto;
+.col-md-4 img {
+    width: 100px;
+    height: 100px;
 }
 
 .product-code {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     font-size: 75%;
+}
+
+.col-md-6 img {
+    border-style: dotted;
+    
 }
 
 /*------------------------ Products Page Overlay ------------------------*/
@@ -151,8 +148,8 @@ p {
 }
 
 .category {
-    font-size: 30px;
-    padding-top: 20px;
+    font-size: 15px;
+    padding-top: 5px;
 }
 
 .category-box {

@@ -7,7 +7,8 @@
 
 {% block content %}
   
-        <section class="py-5">
+         <!-- Product section-->
+         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     {% for c in current_categories %}
@@ -15,58 +16,44 @@
                             <button type="button" class="btn btn-secondary btn-sm">Small button</button>{{ c.friendly_name }}</span>
                         </a>
                     {% endfor %}
-                    
-                    {% if product.image_2 %}
-                    <div class="col-md-4">
-                        <img class="card-img-top" src="{{ product.image_2.url }}" alt="{{ product.name }}" />
 
-                        {% if product.category %}
+
+
+                    {% if product.image_2 %}
+                    <div class="col-md-6 img"><img class="card-img-top mb-5 mb-md-0" src="{{ product.image_2.url }}" alt="{{ product.name }}" /></div>
+
+                    <div class="col-md-6">
+                    
+                        <div class="small mb-1">SKU: BST-498</div>
+                        <h1 class="display-5 fw-bolder">
+                            <div class="product-detail-title">{{ product.name }}</div>
+                        </h1>
+                        <div class="fs-5 mb-5">
+                            {% if product.category %}
                         <div class="category">
                             <a href="{% url 'products' %}?category={{ product.category.name }}">
                                 <i class="fas fa-pizza-slice"></i>{{ product.category.friendly_name }}</a>
                             </div>
                         {% endif %}
-
-                        <div class="product-code">Product Number: {{ product.id }}</div></div>
-                    
+                        <div class="product-code">Product Number: {{ product.id }}</div>
                     {% else %}
                         <a href="{% url 'product_detail' product_id">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" />
-                    
-                    {% endif %}
-                    
-                    
-                    <div class="col-md-6">
-                        
-                        <div class="product-detail-title">{{ product.name }}</div>
-
-                        <div class="fs-5 mb-5">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" />
+                        {% endif %}
                             <span class="product-detail-price">£{{ product.price }}</span>
                         </div>
-
                         <p class="lead">{{ product.description }}</p>
-                        <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
-                    
-                   
-                        
-                   
-                        {% csrf_token %}
-                                <p class="mt-3"><strong>Quantity:</strong></p>
-                                <div class="form-group w-50">
-                                    <div class="input-group input-group-{{ product.id }}">
-                                        <div class="input-group-prepend">
-                                        </div>
-
-
-                                        <input class="form-control qty_input id_qty_{{ product.id }}" type="number"
-                                            name="quantity" value="1" min="1" max="99"
-                                            data-item_id="{{ product.id }}">
-                                            <button type="submit" value="ADD TO CART" class="btn btn-success btn-lg">ADD TO CART</button>
-                                        </div>
-                                    </div>
-                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                </form>
-                        </section>
+                        <div class="d-flex">
+                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                <i class="bi-cart-fill me-1"></i>
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
