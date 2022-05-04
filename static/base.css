@@ -266,6 +266,11 @@ table td:nth-last-child(1) {
     text-align: center;
 }
 
+.footer-container {
+    position: fixed;
+    bottom: 0;
+}
+
 .category {
     font-size: 50px;
     padding-top: 5px;

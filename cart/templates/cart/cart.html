@@ -12,14 +12,12 @@
    <div class="bag-container"> 
   <h1>Your Order Shopping Cart</h1>
  
-
+            {% if cart_items %}
        <div class="cart-container">
          <h2>Cart</h2>
          <table>
            <thead>
              <tr>
-            {% if cart_items %}
-             <th><strong>Product</strong></th>
             {% else %}
             <p class="lead mb-5">Your Cart is currently empty.</p>
                 <a href="{% url 'products' %}">
@@ -27,7 +25,26 @@
             </a>
             <span class="text-uppercase">Continue with Ordering</span>
             {% endif %}
-           
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Size</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+            {% for item in cart_items %}
+                  <td scope="row">{{ item.product.name }}</td>
+                  <td>{{ item.product.size }}</td>
+                  <td>£{{ item.product.price }}</td>
+                  <td>{{ item.quantity }}</td>
+                </tr>
+            {% endfor %}
+              </tbody>
+            </table>
         </tr>
            </thead>
            <tbody id="carttable">
