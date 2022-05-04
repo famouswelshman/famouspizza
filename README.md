@@ -156,14 +156,14 @@ Caprina Pizza Image - Photo by Vincent Rivaud: https://www.pexels.com/photo/top-
 Broccolli Pizza Img - https://www.KitchenKonfidence.com & https://www.streaminggourmet.com
 Proscuitto Pizza Img - Photo by Pixabay: https://www.pexels.com/photo/cheese-close-up-cooking-crispy-263041/
 Napolitana Pizza Img - Photo by Victor Miyata: https://www.pexels.com/photo/pizza-on-brown-wooden-table-3682837/
-
+Cheese Pizza Image - Photo by JÉSHOOTS: https://www.pexels.com/photo/dinner-fast-food-lunch-meal-3644/
 
 
 ## Other Credits
 StartBootstrap - E-Commerce template downloaded and customized for project
 Google Fonts - Comfortaa Font for main website font styling
 Font Awesome - Logos and links
-
+Coca Cola, Fanta and Sprite Logos - Saved as images from Google Images - Logos are copyright protected used in this project for demonstration purposes.
 
 
 ## Libraries used
