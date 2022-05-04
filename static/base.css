@@ -40,18 +40,14 @@ p {
     text-align: center;
 }
 
-.card-img-top {
-    height: 100px;
-    width: 100px;
-}
-
 .card-body {
     text-align: center;
 }
 
 .card-img-top {
+    margin-top: 65px;
     height: auto;
-    width: auto;
+    object-fit: fill;
 }
 
 .container2 {
@@ -104,6 +100,7 @@ p {
 .footer-container {
     position: fixed;
     bottom: 0;
+    background-color: #555;
     height: 100px;
     width: 100%;
 }
@@ -126,6 +123,21 @@ p {
     font-family: 'Comfortaa', cursive;
 }
 
+.col-md-4 {
+    width: 100vh;
+    height: 50vh;
+    object-fit: fill;
+}
+
+.py-5, .col-md-6 {
+    height: auto;
+}
+
+.product-code {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 75%;
+}
 
 /*------------------------ Products Page Overlay ------------------------*/
 
@@ -140,6 +152,7 @@ p {
 
 .category {
     font-size: 30px;
+    padding-top: 20px;
 }
 
 .category-box {
@@ -247,13 +260,18 @@ table td:nth-last-child(1) {
 
 /*---------------------- Media Sizing ------------------------*/
 
-@media (min-width: 310px)  {
+@media (min-width: 375px)  {
 .tagline {
     font-family: 'Comfortaa', cursive;
     font-size: 50px;
     color: white;
     margin-top: 10px;
     text-align: center;
+}
+
+.category {
+    font-size: 50px;
+    padding-top: 5px;
     }
 }
 
