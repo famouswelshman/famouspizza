@@ -14,18 +14,14 @@
  
             {% if cart_items %}
        <div class="cart-container">
-         <h2>Cart</h2>
+         <h2></h2>
          <table>
            <thead>
              <tr>
             {% else %}
-            <p class="lead mb-5">Your Cart is currently empty.</p>
-                <a href="{% url 'products' %}">
-             <th><strong>Price</strong></th>
-            </a>
-            <span class="text-uppercase">Continue with Ordering</span>
+              <h2>Your Cart is currently empty.</h2>
             {% endif %}
-            <table class="table">
+            <table class="items-table">
               <thead>
                 <tr>
                   <th scope="col">Item</th>

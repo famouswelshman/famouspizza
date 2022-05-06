@@ -125,6 +125,10 @@ remain open but closing these completely corrupts the display of the containers,
 ## Javascript
 
 ## Django
+Project Apps
+
+Cart
+Products
 
 # Project Challenges
 >
