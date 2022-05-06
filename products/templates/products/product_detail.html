@@ -43,7 +43,13 @@
                         </div>
                         <p class="lead">{{ product.description }}</p>
                         <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
+
                         {% csrf_token %}
+                        <select class="dropdown">
+                            <option value="s">SML</option>
+                            <option value="m" selected>MED</option>
+                            <option value="l">LRG</option>
+                        </select>
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group input-group-{{ product.id }}">

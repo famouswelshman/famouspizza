@@ -141,15 +141,6 @@ p {
     
 }
 
-/*-------------- CART Page ---------------------*/
-
-.items-table {
-    text-align: center;
-    font-family: 'Comfortaa', cursive;
-}
-
-
-
 /*------------------------ Products Page Overlay ------------------------*/
 
 .products-overlay {
@@ -170,6 +161,7 @@ p {
     text-align: center;
 }
 
+/*------------- LINKS ACTIONS ----------*/
 /* unvisited link */
 a:link {
     color: red;
@@ -192,8 +184,19 @@ a:link {
     color: blue;
   }
 
+/*------------- PRODUCT DETAILS PAGE ------------------------------*/
+
+  .dropdown {
+      font-family: 'Comfortaa', cursive;
+  }
+
+
 /*-------------- Shopping Cart Page ----------------------------*/
 
+.items-table {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+}
 
 .bag-container {
   max-width: 800px; 
