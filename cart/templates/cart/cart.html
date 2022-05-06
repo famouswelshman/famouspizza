@@ -34,7 +34,7 @@
                 <tr>
             {% for item in cart_items %}
                   <td scope="row">{{ item.product.name }}</td>
-                  <td>{{ item.product.size }}</td>
+                  <td>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</td>
                   <td>£{{ item.product.price }}</td>
                   <td>{{ item.quantity }}</td>
                 </tr>
