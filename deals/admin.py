@@ -1,7 +1,8 @@
 from django.contrib import admin
+from .models import Deals
 
 # Register your models here.
 
-from .models import Deals
+
 
 admin.site.register(Deals)
