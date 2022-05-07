@@ -64,7 +64,7 @@ Registered user can select item, remove or update their order and visit their ca
 
 
 # Website UX
-
+The 
 
 ## Features
 
@@ -168,7 +168,7 @@ StartBootstrap - E-Commerce template downloaded and customized for project
 Google Fonts - Comfortaa Font for main website font styling
 Font Awesome - Logos and links
 Coca Cola, Fanta and Sprite Logos - Saved as images from Google Images - Logos are copyright protected used in this project for demonstration purposes.
-
+Deals Image used courtesy of - https://stock.adobe.com/uk/
 
 ## Libraries used
 * Django / MySQL Database
