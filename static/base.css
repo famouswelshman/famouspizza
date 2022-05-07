@@ -183,6 +183,11 @@ a:link {
   a:active {
     color: blue;
   }
+/*------------------ DEALS PAGE --------------------------*/
+
+.deals-tagline {
+    align-items: center;
+}
 
 /*------------- PRODUCT DETAILS PAGE ------------------------------*/
 
