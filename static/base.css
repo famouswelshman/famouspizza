@@ -99,12 +99,12 @@ p {
     font-size: larger;
 }
 
-.footer-container {
-    position: fixed;
+.footer {
+    position:fixed;
     bottom: 0;
     background-color: #555;
-    width: 100%;
-    height: 50px;
+    width:max-content;
+    height: 100px;
 }
 
 .col-left {
@@ -204,22 +204,26 @@ a:link {
   background:#FFF; 
   padding:30px;
   border-radius:5px;
+
 }
 .productcont {
   display: flex; 
 }
+
 .product {
   padding:1em; 
   border:1px solid #E0E4CC; 
   margin-right:1em; 
   border-radius:5px;
 }
+
 .cart-container {
   border:1px solid #E0E4CC;
   border-radius:5px;
   margin-top:1em;
   padding:1em;
 }
+
 button, input[type="submit"] { 
     border:1px solid #FA6900; 
     color:#fff; 
@@ -230,25 +234,30 @@ button, input[type="submit"] {
     border-radius: 1.2em;
     transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
+
 button:hover, button:focus, button:active, input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active {
     background: #A7DBD8;
     border-color:#69D2E7;
     color:#000;
     cursor: pointer;
 }
+
 table {
   margin-bottom:1em;
   border-collapse:collapse;
 }
+
 table td, table th {
   text-align:left;
   padding:0.25em 1em;
   border-bottom:1px solid #E0E4CC;
 }
+
 #carttotals {
   margin-right:0;
   margin-left:auto;
 }
+
 .cart-buttons {
   width:auto;
   margin-right:0;
@@ -257,12 +266,15 @@ table td, table th {
   justify-content:flex-end;
   padding:1em 0;
 }
+
 #emptycart {
   margin-right:1em;
 }
+
 table td:nth-last-child(1) {
   text-align:right;
 }
+
 .message {
   border-width: 1px 0px;
   border-style:solid;
@@ -281,18 +293,13 @@ table td:nth-last-child(1) {
     color: white;
     margin-top: 10px;
     text-align: center;
-}
-
-.footer-container {
-    position: fixed;
-    bottom: 0;
+    }
 }
 
 .category {
     font-size: 50px;
     padding-top: 5px;
     }
-}
 
 @media (min-width: 568px)  {
 .tagline {

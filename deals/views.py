@@ -1,7 +1,14 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Deals
 
-# Create your views here.
+
+
 
 def deals(request):
-    return render(request, 'deals/deals.html')
+    all_deals = Deals.objects.all()
+
+    context = {
+        'all_deals': all_deals,
+    }
+
+    return render(request, 'deals/deals.html', context)
