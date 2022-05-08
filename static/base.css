@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    background-color: #000;
 }
 
 body {
@@ -161,6 +162,11 @@ p {
     text-align: center;
 }
 
+.card-footer {
+    border-style: dashed;
+    color: green;
+}
+
 /*------------- LINKS ACTIONS ----------*/
 /* unvisited link */
 a:link {
@@ -191,6 +197,16 @@ a:link {
     margin-right: auto;
     width: 60%;
     padding-top: 50px;
+}
+
+.container-deals {
+    border-style: dashed;
+    color: white;
+}
+
+.container-row {
+    border-style: dotted;
+    color: yellow;
 }
 
 /*------------- PRODUCT DETAILS PAGE ------------------------------*/
