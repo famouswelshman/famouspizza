@@ -2,19 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-                <h1 class="page-title"></h1>
-                {% for c in current_categories %}
-                <div class="category-box">
-                    <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-                        <button type="button" class="btn btn-secondary btn-lg">{{ c.friendly_name }}</button>
-                    </a>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
+
 {% endblock %}
 
 {% block content %}
@@ -23,38 +11,22 @@
             <img src="/media/Deals_Logo.jpg" alt="deals picture" style="width:100%;">
         </div>     
         
-        <div class="row">
-            <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
-                <div class="row">
-                {% for deal in all_deals %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card h-100 border-0">
-                           
-                            <div class="card-body">
-                                <h2>{{ deal.name }}</h2>
-                            </div>
-                            <div class="card-footer bg-black pt-0 border-0 text-center">
-                                <div class="row">
-                                    <div class="col">
-                                        <p class="lead mb-0 text-left font-weight-bold">£{{ deal.price }}</p>
-                                    
-                                    </div>
+        {% for deal in all_deals %}
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h5 class="card-title">{{ deal.name }}</h5>
+                <p class="card-text">{{ deal.price }}</p>
+            </div>
+            <div class="col">
+              {% if deal.image %}
+            <a href="{% url 'deals' %}">
+                      <img class="card-img-top img-fluid" src="{{ deal.image.url }}" alt="{{ product.name }}">
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}       
 
-                                        {% if product.category %}
-                                        <a href="{% url 'products' %}?category={{ product.category.name }}">
-                                            <i class="fas fa-pizza-slice"></i><br>{{ product.category.friendly_name }}
-                                        </a>
-                                        {% endif %}
-                                        
-                                
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  
-                    
-                {% endfor %}
 
 {% endblock %}
