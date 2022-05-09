@@ -167,6 +167,11 @@ p {
     color: green;
 }
 
+.card-footer {
+    border-style: groove;
+    border-color: #E0E4CC;
+}
+
 /*------------- LINKS ACTIONS ----------*/
 /* unvisited link */
 a:link {
@@ -196,7 +201,7 @@ a:link {
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-    padding-top: 50px;
+    padding-top: 70px;
 }
 
 .container-deals {

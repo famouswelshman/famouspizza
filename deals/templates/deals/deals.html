@@ -1,3 +1,4 @@
+         
 {% extends "base.html" %}
 {% load static %}
 
@@ -27,6 +28,7 @@
                                 <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ deal.name }}">
                             </a>
                             {% endif %}
+                            <div class="card-footer">
                             <div class="card-body">
                                 <h2>{{ deal.name }}</h2>
                             </div>
@@ -34,7 +36,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <p class="lead mb-0 text-left font-weight-bold">£{{ deal.price }}</p>
-                                    
+                                    <p>{{ deal.description }}</p>
                                     </div>
 
                                         {% if deal.category %}
@@ -50,7 +52,10 @@
                             </div>
                         </div>
                     </div>
-
-                {% endfor %}
+                    </div>
+           {% endfor %}
+       
+                           
+               
 
 {% endblock %}
