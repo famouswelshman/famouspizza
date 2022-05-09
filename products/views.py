@@ -57,7 +57,7 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ Page to djsplay full details of one specific product with search function """
+    """ Page to display full details of one specific product with search function """
 
     product = get_object_or_404(Product, pk=product_id)
 
