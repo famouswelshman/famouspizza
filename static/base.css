@@ -172,6 +172,10 @@ p {
     border-color: #E0E4CC;
 }
 
+.remove-item {
+    cursor: pointer;
+}
+
 /*------------- LINKS ACTIONS ----------*/
 /* unvisited link */
 a:link {
