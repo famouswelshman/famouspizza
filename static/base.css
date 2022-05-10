@@ -218,6 +218,11 @@ a:link {
     color: yellow;
 }
 
+.navbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
 /*------------- PRODUCT DETAILS PAGE ------------------------------*/
 
 .dropdown {
