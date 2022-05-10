@@ -36,9 +36,12 @@
                   <td scope="row">{{ item.product.name }}</td>
                   <td>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</td>
                   <td>£{{ item.product.price }}</td>
-                  <td>{{ item.quantity }}<a class="remove-item" id="remove_{{ item.item_id }}" data-size="{{ item.size }}">Remove</td></a>
+                  {% csrf_token %}
+                  <td>{{ item.quantity }}<a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}">Remove</td></a>
                 </tr>
-    
+                {% if item.product.has_sizes %}
+                  <input type="hidden" name="product_size" value="{{ item.size }}">
+                {% endif %}
             {% endfor %}
               </tbody>
             </table>
