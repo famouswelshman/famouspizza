@@ -36,12 +36,13 @@
                   <td scope="row">{{ item.product.name }}</td>
                   <td>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</td>
                   <td>£{{ item.product.price }}</td>
-                  {% csrf_token %}
-                  <td>{{ item.quantity }}<a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}">Remove</td></a>
-                </tr>
                 {% if item.product.has_sizes %}
                   <input type="hidden" name="product_size" value="{{ item.size }}">
                 {% endif %}
+                  {% csrf_token %}
+                  <td>{{ item.quantity }}<a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}">Remove</td></a>
+                </tr>
+                
             {% endfor %}
               </tbody>
             </table>
@@ -82,17 +83,17 @@
 
 <script type-="text/javascript">
   // Remove item from the cart on click
-  $('remove-item').click(function(e) {
-    var csrfToken = "{{ csrf_token }}"
+  $('.remove-item').click(function(e) {
+    var csrfToken = "{{ csrf_token }}";
     var itemId = $(this).attr('id').split('remove_')[1];
-    var size = $(this).data('size');
-    var url = `/cart/remove/${itemId}`;
-    var data = {'csrfmiddlewaretoken': csrfToken, 'size': size}
+    var size = $(this).data('product_size');
+    var url = `/cart/remove/${itemId}/`;
+    var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size}
 
     $.post(url, data)
-    .done(function() {
-      location.reload();
-    });
+      .done(function() {
+        location.reload();
+      });
   })
 </script>
 {% endblock %}
