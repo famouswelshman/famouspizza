@@ -256,7 +256,11 @@ a:link {
     border-radius:5px;
     margin-top:1em;
     padding:1em;
+    overflow: visible;
 }
+
+
+/*---------- BUTTONS -----------------*/
 
 button, input[type="submit"] { 
     border:1px solid #FA6900; 
@@ -273,6 +277,11 @@ button:hover, button:focus, button:active, input[type="submit"]:hover, input[typ
     background: #A7DBD8;
     border-color:#69D2E7;
     color:#000;
+    cursor: pointer;
+}
+
+.btt-link,
+.remove-item {
     cursor: pointer;
 }
 
@@ -309,10 +318,25 @@ table td:nth-last-child(1) {
     text-align:right;
 }
 
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 9999999999;
+}
+
 .message {
     color:#679996;
     padding:0.5em 0;
     margin:1em 0;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
 
 /*---------------------- Media Sizing ------------------------*/

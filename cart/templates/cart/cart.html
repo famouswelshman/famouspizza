@@ -28,6 +28,7 @@
                   <th scope="col">Size</th>
                   <th scope="col">Price</th>
                   <th scope="col">Quantity</th>
+                  <th scope="col"></th>
                 </tr>
               </thead>
               <tbody>
@@ -40,7 +41,8 @@
                   <input type="hidden" name="product_size" value="{{ item.size }}">
                 {% endif %}
                   {% csrf_token %}
-                  <td>{{ item.quantity }}<a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}">Remove</td></a>
+                  <td>{{ item.quantity }}
+                  <td><a class="remove-item" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><button type="button" class="btn btn-danger btn-sm">Remove</button></td></a>
                 </tr>
                 
             {% endfor %}
