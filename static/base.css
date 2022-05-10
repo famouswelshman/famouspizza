@@ -96,7 +96,6 @@ p {
 
 .message-container {
     color: white;
-    font-size: larger;
 }
 
 .footer {
@@ -204,7 +203,7 @@ a:link {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 40%;
     padding-top: 70px;
 }
 

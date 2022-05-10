@@ -5,5 +5,4 @@ from django.contrib import messages
 
 
 def index(request):
-    messages.success(request, 'test')
     return render(request, 'home/index.html')
