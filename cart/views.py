@@ -15,13 +15,6 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     """ Adding a product to the cart """
 
-    if 'product_price' > 20:
-        print("standard med size")
-    else:
-        print("larger size")
-        return redirect(redirect_url)
-        
-
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')

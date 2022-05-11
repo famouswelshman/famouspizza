@@ -41,6 +41,9 @@
                     {% endif %}
                         <span class="product-detail-price">£{{ product.price }}</span>
                         </div>
+                        {% if product.category.parent %}
+                        <a href="{% url 'products' %}?category={{ product.parent.name }}">Large</a>
+                        {% endif %}
                         <p class="lead">{{ product.description }}</p>
 
                         <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
