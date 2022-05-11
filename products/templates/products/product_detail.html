@@ -41,8 +41,8 @@
                     {% endif %}
                         <span class="product-detail-price">£{{ product.price }}</span>
                         </div>
-                        {% if product.category.parent %}
-                        <a href="{% url 'products' %}?category={{ product.parent.name }}">Large</a>
+                        {% if product.category %}
+                        <a href="{% url 'products' %}?category={{ product.category.name }}"><h2>All Sizes</h2></a>
                         {% endif %}
                         <p class="lead">{{ product.description }}</p>
 

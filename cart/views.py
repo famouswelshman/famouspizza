@@ -19,6 +19,7 @@ def add_to_cart(request, item_id):
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     size = None
+
     if 'product_size' in request.POST:
         size = request.POST['product_size']
     cart = request.session.get('cart', {})
@@ -47,6 +48,7 @@ def add_to_cart(request, item_id):
 
 def remove_from_cart(request, item_id):
     """ Remove product from cart """
+
     try:
         size = None
         if 'product_size' in request.POST:
@@ -60,8 +62,9 @@ def remove_from_cart(request, item_id):
         else:
             cart.pop(item_id)
             messages.success(request, f'Removed {product.name} from your bag')
+
         request.session['cart'] = cart
-        print("line 46")
         return HttpResponse(status=200)
+        
     except Exception as e:
         return HttpResponse(status=500)
