@@ -45,18 +45,21 @@ Royalty free web content
 * Registered Users want to complete payment of products for delivery service
 
 ### User Story 1
-New to site users can view all pizza product content by navigating product pages. Products will be associated by category and display their size, quantity and price. 
+New to site users can view all pizza product content by topic either in the dropdown navbar or by clicking on the buttons shows on homepage. Homepage has two buttons which direct user to either
+full menu which includes everything or some deals products so as to mimize the need to search through entire menu.
 
+### User story 2
+User can search via homepage searchbar for words which will then return all products synonymous with their search request and products are grouped under categories therefore by clicking on a heading i.e - meat eaters will return all results for meat based products pertaining to that link.
 
-### User Story 2
+### User Story 3
 User can setup an account via registration link which enables the customer to add or remove products from their checkout cart. Product information is restricted to the current customer and cannot be viewed by other account registered users. Registered users account details will be secure to their account.
 Registered user can edit and delete their profile details. Registered user can logout of their account until next login.
 
-### User Story 3
-Registered user can select item, remove or update their order and visit their cart for checkout.The user can then process payment of their order.
-
 ### User Story 4
+Registered user/user can select item by size and quantity, which will then be added to their shopping cart, can also remove products and proceed to checkout.The user can then process payment of their order.
 
+### User Story 
+User can logout from their account and return at another time to view their previous order products and details.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Structure
@@ -67,9 +70,15 @@ Registered user can select item, remove or update their order and visit their ca
 The 
 
 ## Features
+* Able to search homepage and reveal any products linked to the word or words used by search criteria.
+* Products are returned in groups such as 'Meat Eaters' and 'Vegetarian'.
+* Checkout cart view shows all itemised product, quantity, size and price making it clear to the user before checkout.
+* User ability to create, esit and delete products in their shopping cart.
+* Ability to create and update user login/profile.
 
 
 ### Nice to have Features
+The project was setup to include a dropdown and function for recording one of three sizes per item. This was part of the model setup for products but since there would be a lot more, inctricate code required for functionality it was not explored further. Future projects would show that selection by size would have effect on the price range therefore an if statement would be required when adding to cart which would decide if by size = price and further functionailty would be availabe especially in instance such as my project where products would be ordered based on size/amount.
 
 ## Future Features
 
