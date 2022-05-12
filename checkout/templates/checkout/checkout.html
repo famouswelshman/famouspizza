@@ -61,8 +61,18 @@
 				{% endif %}
 			</input>
 		</fieldset>
+		
+		<form id="payment-form">
+			<div id="card-element">
+
+			</div>
+
+			<div id="card-errors" role="alert"></div>
+			<button id="submit">Submit</button>
+		</form>
+
 		<fieldset class="px-3">
-			<legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+			<legend class="fieldset-label small text-black px-2 w-auto"><h5>Payment</h5></legend>
 			<!--STRIPE CARD ELEMENT TO GO HER -->
 			<div class="mb-3" id="card-element"></div>
 
@@ -70,11 +80,14 @@
 			<div class="mb-3 text-danger" id="card-errors" role="alert"></div>
 		</fieldset>
 
+
+
+		
 			<a href="{% url 'view_cart' %}" class="btn btn-outline-black rounded-0">
 				<span class="icon">
 					<i class="fas fa-chevron-left"></i>
 				</span>
-				<span class="font-weight-bold">Continue Ordering</span>
+				<span class="font-weight-bold"><a href="{% url 'products' %}">Continue Ordering</a></span>
 			</a>
 
 				<a href="{% url 'view_cart' %}" class="btn btn-outline-black rounded-0">
@@ -89,13 +102,7 @@
 						<i class="fas fa-exclamation-circle"></i>
 					</span>
 					<span>Your card will be charged £{{ grand_total|floatformat:2 }}</span>
-				</p>
-
-
-
-
-
-
+			</p>
 	</div>
 </div>
 
@@ -174,9 +181,13 @@
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
+	{{ block.super }}
+	{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+	{{ client_secret|json_script:"id_client_secret" }}
 
+
+
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 <script type-="text/javascript">
   // Remove item from the cart on click
   $('.remove-item').click(function(e) {
