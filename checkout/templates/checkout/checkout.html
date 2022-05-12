@@ -44,41 +44,30 @@
 					{% if user.is_authenticated %}
 					<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
 					<input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-				{% else %}
-				
+					{% else %}
 					<label class="form-check-label" for="id-save-info">
-						<div class="signup-row">
-							<div class="col mb-6">
-						<a class="text-info" href="{% url 'account_signup' %}">Create an account</a>
-						</div>
 						<br>
-						<div class="col mb-6">
-						<a class="text-info" href="{% url 'account_login' %}">Login</a> to save this information.
-						</div>
-						</div>
-						</div>
+						<a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+						<a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
 					</label>
-				{% endif %}
+					
+					{% endif %}
 			</input>
 		</fieldset>
-		
-		<form id="payment-form">
-			<div id="card-element">
-
-			</div>
-
-			<div id="card-errors" role="alert"></div>
-			<button id="submit">Submit</button>
 		</form>
 
-		<fieldset class="px-3">
-			<legend class="fieldset-label small text-black px-2 w-auto"><h5>Payment</h5></legend>
-			<!--STRIPE CARD ELEMENT TO GO HER -->
-			<div class="mb-3" id="card-element"></div>
-
-			<!--- WILL SHOW ANY FORM ERRORS -->
-			<div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-		</fieldset>
+		
+		<fieldset>
+			<fieldset class="px-3">
+				<legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+				<!-- A Stripe card element will go here -->
+				<div class="mb-3" id="card-element"></div>
+				<!-- Used to display form errors -->
+				<div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+				<!-- Pass the client secret to the view so we can get the payment intent id -->
+				<input type="hidden" value="{{ client_secret }}" name="client_secret">
+			</fieldset>
+		
 
 
 
@@ -184,7 +173,7 @@
 	{{ block.super }}
 	{{ stripe_public_key|json_script:"id_stripe_public_key" }}
 	{{ client_secret|json_script:"id_client_secret" }}
-
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 
 
 <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
