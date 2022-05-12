@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+    <div class="products-overlay">
+
+
+   <div class="bag-container"> 
+  <h1>Your Order Shopping Cart</h1>
+ 
+      {% if cart_items %}
+       <div class="cart-container">
+         <h2></h2>
+         <table>
+           <thead>
+             <tr>
+      {% else %}
+              <h2>Your Cart is currently empty.</h2>
+            {% endif %}
+            <table class="items-table">
+              <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Size</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+            {% for item in cart_items %}
+                  <td scope="row">{{ item.product.name }}</td>
+                  <td>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</td>
+                  <td>£{{ item.product.price }}</td>
+                {% if item.product.has_sizes %}
+                  <input type="hidden" name="product_size" value="{{ item.size }}">
+                {% endif %}
+                  {% csrf_token %}
+                  <td>{{ item.quantity }}
+                  <td><a class="remove-item" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><button type="button" class="btn btn-danger btn-sm">Remove</button></td></a>
+                </tr>
+                
+            {% endfor %}
+              </tbody>
+            </table>
+        </tr>
+           </thead>
+           <tbody id="carttable">
+           </tbody>
+         </table>
+         <hr>
+         <table id="carttotals">
+           <tr>
+             <td><strong>Items</strong></td>
+             <td><strong>Total</strong></td>
+           </tr>
+           <tr>
+             <td>{{ item.quantity }}<span id="itemsquantity"></span></td>
+            
+             <td>£<span id="Total">{{ total|floatformat:2 }}</span></td>
+             {% if free_delivery_delta > 0 %}
+             <td>You just need to spend £{{ free_delivery_delta }} more for free delivery.</td>
+           </tr></table>
+             {% endif %}
+           
+         <div class="cart-buttons">  
+           <button id="emptycart">Empty Cart</button>
+           <button id="checkout">Checkout</button>
+         </div>
+       </div>
+</div>
+
+
+
+{% endblock %}
