@@ -30,6 +30,7 @@
                 </tr>
               </thead>
               <tbody>
+                
                 <tr>
             {% for item in cart_items %}
                   <td scope="row">{{ item.product.name }}</td>
@@ -42,7 +43,6 @@
                   <td>{{ item.quantity }}
                   <td><a class="remove-item" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><button type="button" class="btn btn-danger btn-sm">Remove</button></td></a>
                 </tr>
-                
             {% endfor %}
               </tbody>
             </table>
