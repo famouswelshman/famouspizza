@@ -195,6 +195,7 @@ Deals Image used courtesy of - https://stock.adobe.com/uk/
 * GitHub used for Git version control and Gitpod was used for IDE.
 * Heroku used for deplyment of the application.
 * Shopping cart template was downloaded from - https://www.codehim.com/
+* Template for order details form credited to - https://colorlib.com/wp/bootstrap-form-templates/
 
 
 

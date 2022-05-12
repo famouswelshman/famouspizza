@@ -6,11 +6,28 @@ body {
 .leftside, .rightside {
     height:50vh;
     width:100%;
+    padding: 50px;
+}
+
+.rightside {
+    color: white;
+}
+
+.fieldset {
+    font-family: 'Comfortaa', cursive;
 }
 
 .text-box {
     width: 50%;
     text-align: center;
+}
+
+.items-table {
+    color: white;
+}
+
+.cart-container {
+    padding: 50px;
 }
 /*-------------------- MEDIA QUERIES -------*/
 
@@ -22,10 +39,10 @@ body {
 
 
 .leftside {
-    background-color: red;
+    background-color: white;
 }
 
 .rightside {
-    background-color: blue;
+    background-color: black;
 }
 
