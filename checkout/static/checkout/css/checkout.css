@@ -1,8 +1,17 @@
+
+body {
+    text-align: center;
+}
+
 .leftside, .rightside {
     height:50vh;
     width:100%;
 }
 
+.text-box {
+    width: 50%;
+    text-align: center;
+}
 /*-------------------- MEDIA QUERIES -------*/
 
 @media screen and (min-width: 568px) {
