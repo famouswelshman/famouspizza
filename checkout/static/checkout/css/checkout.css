@@ -1,12 +1,22 @@
 
 body {
-    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+h5 {
+    color: white;
+}
+
+.text-box {
+    padding: 5px;
 }
 
 .leftside, .rightside {
     height:50vh;
     width:100%;
     padding: 50px;
+    text-align:center;
 }
 
 .rightside {
@@ -39,7 +49,8 @@ body {
 
 
 .leftside {
-    background-color: white;
+    background: url('/media/main_background_pic_dark.jpg') no-repeat center;
+    color: white;
 }
 
 .rightside {

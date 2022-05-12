@@ -14,7 +14,7 @@
 <div class="row g-0">
 	<div class="col-md-6 g-0">
 		<div class="leftside">
-		<h3>Please fill out the form below to complete your order</h3>
+		<h4>Please fill out the form below to complete your order</h4>
 		<form action="{% url 'checkout' %}" method="POST" id="payment">
 			{% csrf_token %}
 			<fieldset class="rounded px-3">
@@ -26,24 +26,37 @@
 				</div>
 			</fieldset>
 			<fieldset class="rounded px-3">
-				<legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
+				<legend class="fieldset-label small text-black px-2 w-auto"><h5>Delivery</h5></legend>
 				<div class="text-box">
 					{{ order_form.phone_number | as_crispy_field }}
+					<br>
 					{{ order_form.country | as_crispy_field }}
-					{{ order_form.postcode | as_crispy_field }}
-					{{ order_form.town_or_city | as_crispy_field }}
+					<br>
 					{{ order_form.street_address1 | as_crispy_field }}
+					<br>
 					{{ order_form.street_address2 | as_crispy_field }}
-					{{ order_form.county | as_crispy_field }}
+					<br>
+					{{ order_form.town_or_city | as_crispy_field }}
+					<br>
+					{{ order_form.postcode | as_crispy_field }}
 				</div>
 				<div class="form-check">
 					{% if user.is_authenticated %}
 					<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
 					<input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
 				{% else %}
+				
 					<label class="form-check-label" for="id-save-info">
+						<div class="signup-row">
+							<div class="col mb-6">
 						<a class="text-info" href="{% url 'account_signup' %}">Create an account</a>
+						</div>
+						<br>
+						<div class="col mb-6">
 						<a class="text-info" href="{% url 'account_login' %}">Login</a> to save this information.
+						</div>
+						</div>
+						</div>
 					</label>
 				{% endif %}
 			</input>
@@ -90,11 +103,93 @@
 
 <div class="col-md-6 g-0">
 	<div class="rightside">
-		<h1>Your Order Shopping Cart</h1>
+		<h1 class="checkout">Your Order Shopping Cart</h1>
+		{% if cart_items %}
+       <div class="cart-container">
+         <h2></h2>
+         <table>
+           <thead>
+             <tr>
+      {% else %}
+              <h2>Your Cart is currently empty.</h2>
+            {% endif %}
+            <table class="items-table">
+              <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Size</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+            {% for item in cart_items %}
+                  <td scope="row">{{ item.product.name }}</td>
+                  <td>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</td>
+                  <td>£{{ item.product.price }}</td>
+                {% if item.product.has_sizes %}
+                  <input type="hidden" name="product_size" value="{{ item.size }}">
+                {% endif %}
+                  {% csrf_token %}
+                  <td>{{ item.quantity }}
+                  <td><a class="remove-item" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><button type="button" class="btn btn-danger btn-sm">Remove</button></td></a>
+                </tr>
+                
+            {% endfor %}
+              </tbody>
+            </table>
+        </tr>
+           </thead>
+		   <tbody id="carttable">
+		</tbody>
+	  </table>
+	  <hr>
+	  <table id="carttotals">
+		<tr>
+		  <td><strong>Items</strong></td>
+		  <td><strong>Total</strong></td>
+		</tr>
+		<tr>
+		  <td>{{ item.quantity }}<span id="itemsquantity"></span></td>
+		 
+		  <td>£<span id="Total">{{ total|floatformat:2 }}</span></td>
+		  {% if free_delivery_delta > 0 %}
+		  <td>You just need to spend £{{ free_delivery_delta }} more for free delivery.</td>
+		</tr></table>
+		  {% endif %}
 
-
+		  <div class="cart-buttons">  
+			<button id="emptycart">Empty Cart</button>
+			<a href="{% url 'checkout' %}"><button id="checkout">Checkout</button></a>
+		  </div>
+		</div>
+ </div>
 </div>
 </div>
 
 
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+
+<script type-="text/javascript">
+  // Remove item from the cart on click
+  $('.remove-item').click(function(e) {
+    var csrfToken = "{{ csrf_token }}";
+    var itemId = $(this).attr('id').split('remove_')[1];
+    var size = $(this).data('product_size');
+    var url = `/cart/remove/${itemId}/`;
+    var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size}
+
+    $.post(url, data)
+      .done(function() {
+        location.reload();
+      });
+  })
+</script>
 {% endblock %}
