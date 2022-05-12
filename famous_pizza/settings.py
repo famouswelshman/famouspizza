@@ -65,7 +65,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'famous_pizza.urls'
 
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
