@@ -44,6 +44,10 @@ h5 {
     position: relative;
 }
 
+.form-check {
+    text-align: left;
+}
+
 /*---------- STRIPE CSS (Stripe.com)------------------*/
 
 .StripeElement,

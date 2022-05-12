@@ -50,7 +50,7 @@
 						<a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
 						<a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
 					</label>
-					
+					</div>
 					{% endif %}
 			</input>
 		</fieldset>
@@ -59,7 +59,7 @@
 		
 		<fieldset>
 			<fieldset class="px-3">
-				<legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+				<legend class="fieldset-label small text-black px-2 w-auto"><h5>Payment</h5></legend>
 				<!-- A Stripe card element will go here -->
 				<div class="mb-3" id="card-element"></div>
 				<!-- Used to display form errors -->
@@ -157,7 +157,7 @@
 		  {% endif %}
 
 		  <div class="cart-buttons">  
-			<button id="emptycart">Empty Cart</button>
+			<a href="{% url 'products' %}"><button id="emptycart">Back to ordering</button></a>
 			<a href="{% url 'checkout' %}"><button id="checkout">Checkout</button></a>
 		  </div>
 		</div>
