@@ -1,8 +1,8 @@
 from django.shortcuts import (
     render, redirect, reverse, HttpResponse, get_object_or_404
 )
-from django.contrib import messages
 
+from django.contrib import messages
 from products.models import Product
 
 # Create your views here.
@@ -11,6 +11,7 @@ def view_cart(request):
     """ This view shows the cart contents page """
     
     return render(request, 'cart/cart.html')
+
     
 def add_to_cart(request, item_id):
     """ Adding a product to the cart """
@@ -61,10 +62,11 @@ def remove_from_cart(request, item_id):
                 cart.pop(item_id)
         else:
             cart.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your bag')
+            messages.success(request, f'Removed {product.name} from your cart')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
         
     except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
