@@ -46,11 +46,11 @@ form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
-stripe.ConfirmCardPayment(clientSecret, {
-        payment_method: {
-            card: card,
-        }
-    }).then(function(result) {
+    stripe.confirmCardPayment(clientSecret, {
+    payment_method: {
+        card: card,
+    }
+}).then(function(result) {
         if (result.error) {
             var errorDiv = document.getElementById('card-errors');
             var html = `
@@ -59,7 +59,7 @@ stripe.ConfirmCardPayment(clientSecret, {
                 </span>
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
-            card.update({ 'disabled': true});
+            card.update({ 'disabled': false});
             $('#submit-button').attr('disabled', false);
         } else {
             if (result.paymentIntent.status === 'succeeded') {
