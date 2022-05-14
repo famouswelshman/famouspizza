@@ -28,10 +28,10 @@ def checkout(request):
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
             'country': request.POST['country'],
-            'postcode': request.POST['postcode'],
-            'town_or_city': request.POST['town_or_city'],
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
+            'town_or_city': request.POST['town_or_city'],
+            'postcode': request.POST['postcode'],
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():

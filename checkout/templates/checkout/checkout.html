@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block page_header %}
-
 {% endblock %}
 
 {% block content %}
@@ -18,7 +18,7 @@
 		<form action="{% url 'checkout' %}" method="POST" id="payment">
 			{% csrf_token %}
 			<fieldset class="rounded px-3">
-				<legend class="fieldset-label small text-black px-2 w-auto"><h5><u>Details</u></h5></legend>
+				<legend class="fieldset-label small text-black px-2 w-auto"><h5>Details</h5></legend>
 				<div class="text-box">
 				{{ order_form.full_name | as_crispy_field }}
 				<br>
@@ -40,6 +40,7 @@
 					<br>
 					{{ order_form.postcode | as_crispy_field }}
 				</div>
+
 				<div class="form-check">
 					{% if user.is_authenticated %}
 					<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
@@ -54,22 +55,21 @@
 					{% endif %}
 			</input>
 		</fieldset>
-		</form>
+	</form>
 
 		
-		<fieldset>
 			<fieldset class="px-3">
 				<legend class="fieldset-label small text-black px-2 w-auto"><h5>Payment</h5></legend>
 				<!-- A Stripe card element will go here -->
 				<div class="mb-3" id="card-element"></div>
+				<br>
 				<!-- Used to display form errors -->
 				<div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+
 				<!-- Pass the client secret to the view so we can get the payment intent id -->
 				<input type="hidden" value="{{ client_secret }}" name="client_secret">
 			</fieldset>
 		
-
-
 
 		
 			<a href="{% url 'view_cart' %}" class="btn btn-outline-black rounded-0">
@@ -79,25 +79,24 @@
 				<span class="font-weight-bold"><a href="{% url 'products' %}">Continue Ordering</a></span>
 			</a>
 
+			<div class="submit-button text-right mt-5 mb-2">                    
 				<a href="{% url 'view_cart' %}" class="btn btn-outline-black rounded-0">
 					<span class="icon">
 						<i class="fas fa-chevron-left"></i>
 					</span>
+					<span class="font-weight-bold">Adjust Bag</span>
 				</a>
-
-				<a href="{% url 'checkout' %}" class="btn btn-outline-black rounded-0">
-					<button id="submit-button" class="btn btn-black rounded-0">
-						<span class="font-weight-bold">Complete Order</span>
-						<span class="icon">
-							<i class="fas fa-lock"></i>
-						</span>
-					</button>
-					</a>
-
-					<p class="small text-danger my-0">
-						<span class="icon">
-							<i class="fas fa-exclamation-circle"></i>
-						</span>
+				<button id="submit-button" class="btn btn-black rounded-0">
+					<span class="font-weight-bold">Complete Order</span>
+					<span class="icon">
+						<i class="fas fa-lock"></i>
+					</span>
+				</button>
+				<p class="small text-danger my-0">
+					<span class="icon">
+						<i class="fas fa-exclamation-circle"></i>
+					</span>
+			</div>
 
 					<span>Your card will be charged £{{ grand_total|floatformat:2 }}</span>
 			</p>
@@ -174,8 +173,6 @@
 </div>
 </div>
 
-
-
 {% endblock %}
 
 {% block postloadjs %}
@@ -186,18 +183,18 @@
 
 
 <script type-="text/javascript">
-  // Remove item from the cart on click
-  $('.remove-item').click(function(e) {
-    var csrfToken = "{{ csrf_token }}";
-    var itemId = $(this).attr('id').split('remove_')[1];
-    var size = $(this).data('product_size');
-    var url = `/cart/remove/${itemId}/`;
-    var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size}
-
-    $.post(url, data)
-      .done(function() {
-        location.reload();
-      });
-  })
-</script>
+	// Remove item from the cart on click
+	$('.remove-item').click(function(e) {
+	  var csrfToken = "{{ csrf_token }}";
+	  var itemId = $(this).attr('id').split('remove_')[1];
+	  var size = $(this).data('product_size');
+	  var url = `/cart/remove/${itemId}/`;
+	  var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size}
+  
+	  $.post(url, data)
+		.done(function() {
+		  location.reload();
+		});
+	})
+  </script>
 {% endblock %}
