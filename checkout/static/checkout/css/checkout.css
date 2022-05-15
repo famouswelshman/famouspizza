@@ -4,6 +4,10 @@ body {
     height: auto;
 }
 
+p {
+    color: #000;
+}
+
 h5 {
     color: white;
 }
@@ -98,6 +102,18 @@ select:invalid,
 select option[value=""] {
     color: #aab7c4 !important;
 }
+
+/*-------------------- SUUCESSFUL CHECKOUT----------------*/
+
+.col-order-number {
+    text-align: left;
+}
+
+.col-order-detail {
+    text-align: left;
+    color: #000;
+}
+
 /*-------------------- MEDIA QUERIES -------*/
 
 @media screen and (min-width: 568px) {

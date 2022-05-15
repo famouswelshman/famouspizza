@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+
+{% endblock %}
+
+{% block content %}
+
+    {% for item in order.lineitems.all %}
+      <div class="bag-container"> 
+
+  <h1>Your order has been successful</h1>
+    <p>Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong></p>
+    <h3>ORDER INFO</h3>
+    <div class="row">
+      <div class="col-order-number">
+        <p><strong>Order Number:</strong> {{ order.order_number }}</p></div>
+      <div class="col-order-detail">
+        <p><strong>Order Details:</strong> {{ order.date }}</p></div>
+        
+
+
+
+      </div>
+
+    
+    <p>Order Detail:</p>
+    {{ order.date }}
+   <p></p>
+    <p>Delivering to:</p>
+    <p>Billing Info:</p>
+
+
+    {% endfor %}
+{% endblock %}
