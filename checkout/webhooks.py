@@ -46,3 +46,9 @@ def webhook(request):
 
     # Get the webhook type from stripe
     event_type = event['type']
+
+    event_handler = event_map.get(event_type, handler.handle_event)
+
+    # call the event handler with the event
+    response = event_handler(event)
+    return response
