@@ -1,3 +1,4 @@
+
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripePublicKey);
@@ -59,11 +60,11 @@ form.addEventListener('submit', function(ev) {
             <span>${result.error.message}</span>`;
         $(errorDiv).html(html);
         card.update({ 'disabled': false});
-                $('#submit-button').attr('disabled', false);
-            } else {
-                if (result.paymentIntent.status === 'succeeded') {
-                    form.submit();
-                }
-            }
-        });
+        $('#submit-button').attr('disabled', false);
+    } else {
+        if (result.paymentIntent.status === 'succeeded') {
+            form.submit();
+        }
+    }
+});
 });
