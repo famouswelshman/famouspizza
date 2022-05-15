@@ -20,20 +20,22 @@
     <div class="row">
       <div class="col-order-number">
         <p><strong>Order Number:</strong> {{ order.order_number }}</p></div>
+        <br>
+        <br>
       <div class="col-order-detail">
-        <p><strong>Order Details:</strong> {{ order.date }}</p></div>
+        <p><strong>Order Details:</strong> 
+          <div class="col-order-detail">
+            <p>Item: {{ item.product.name }}{% if item.product_size %} - Size {{ item.product_size|upper }}{% endif %}</p></div>
+          <div class="col-order-detail">
+            <p>
+
+            </p></div>
+          </div>
         
 
 
 
-      </div>
-
-    
-    <p>Order Detail:</p>
-    {{ order.date }}
-   <p></p>
-    <p>Delivering to:</p>
-    <p>Billing Info:</p>
+        </div>
 
 
     {% endfor %}
