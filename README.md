@@ -71,7 +71,7 @@ User can logout from their account and return at another time to view their prev
 
 
 # Website UX
-The 
+The front-end of the project website gives the user immediate view of the website content and purpose by display of navbar and search bar along with the Pizza branding logo. Home page displays options to quickly go to product variables or search the site for items associated with their search. The ability to add products is straight forward and the product details pages allows for more in depth view and description of the item along with a quantity selector and size dropdown making the process of selecting size and amount straightforward and within two clicks. The user at any point in the process can simply click on their shopping cart allowing instant display of all or any products they might have ordered. The simplicity of the cart allows the user to quickly remove and items and/or return to either the home page of products. The key to their experience is that items such as ‘Deals’ are visually evident from the home page and from selection of products to checkout, the user gets a linear guide through the process of purchase making the experience simple and effective. The addition of pop-up toasts message cards upon adding or deletion of products also improves user experience since at any point the user is aware of what and why they have added or removed products before completing transaction of payment. 
 
 ## Features
 * Able to search homepage and reveal any products linked to the word or words used by search criteria.
@@ -90,6 +90,7 @@ Bakcground animation - Pizza being cooked.
 
 
 # MS4 Wireframes - Balsamic
+My design and styling idea for a pizza ordering service had to include some rustic background photos of said product being either cooked or served. I wanted to incorporate warm colours for images and background acentuating the fire and glow of a pizza oven. I chose the font that shows throughout the website as it gives a nice rounded feel to the text and a homely, earthy expression to the user. I attempted to call and display products in small card formats upon search or click and then show item details in full upon click. The background would remain throughout as a subtle backdrop and I purposely used dark color when there was no image present to highlight the text. I wanted to keep the shopping cart layout simple and responsive with the payment form easy to complete on all sized media. 
 
 ## Desktop Home Page Template
 ![wireframe1]()
