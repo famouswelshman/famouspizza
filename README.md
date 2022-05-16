@@ -96,7 +96,7 @@ My design and styling idea for a pizza ordering service had to include some rust
 ![Wireframe1](https://github.com/famouswelshman/famouspizza/media/home_page1.png)
 
 ## Desktop Products Page Template
-![wireframe2]()
+![wireframe2](/workspace/famouswelshpizza/media/home_page1.png)
 
 ## User Login and sign up Template
 ![wireframe3]()
