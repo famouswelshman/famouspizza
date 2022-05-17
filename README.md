@@ -126,7 +126,8 @@ remain open but closing these completely corrupts the display of the containers,
 1) Quantity amount not displayed in the cart.html. The variable used here was {{ item.quantity }} which 
 Was bringing through the items loop information 
 
-<img src="media/Quantity_amount.png" width="50%">
+<img src="media/Quantity_amount.png" width="50%"><img src="media/Quantity_amount2.png" width="50%">
+I checked the items dictionary but the error was in the contexts.py file where ‘item_data’ was written instead of ‘quantity’ which then pulled through the quantity value to the Cart.
 
 ## Account creation
 
