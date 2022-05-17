@@ -93,16 +93,13 @@ Bakcground animation - Pizza being cooked.
 My design and styling idea for a pizza ordering service had to include some rustic background photos of said product being either cooked or served. I wanted to incorporate warm colours for images and background acentuating the fire and glow of a pizza oven. I chose the font that shows throughout the website as it gives a nice rounded feel to the text and a homely, earthy expression to the user. I attempted to call and display products in small card formats upon search or click and then show item details in full upon click. The background would remain throughout as a subtle backdrop and I purposely used dark color when there was no image present to highlight the text. I wanted to keep the shopping cart layout simple and responsive with the payment form easy to complete on all sized media. 
 
 ## Desktop Home Page Template
-![Wireframe1]<img src="media/home_page1.png">
+<img src="media/home_page1.png">
 
 ## Desktop Products Page Template
-![Wireframe2]<img src="media/products_page1.png">
-
-## User Login and sign up Template
-![wireframe3]()
+<img src="media/products_page1.png">
 
 ## Checkout cart and payments Template
-![wireframe7]()
+<img src="media/Payment_page1.png">
 
 ---------------------------------------------------------------------------------------------------
 
@@ -126,6 +123,10 @@ remain open but closing these completely corrupts the display of the containers,
 
 ## Bugs
 
+1) Quantity amount not displayed in the cart.html. The variable used here was {{ item.quantity }} which 
+Was bringing through the items loop information 
+
+<img src="media/Quantity_amount.png">
 
 ## Account creation
 
