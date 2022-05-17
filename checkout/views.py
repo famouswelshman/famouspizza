@@ -20,11 +20,13 @@ def checkout(request):
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
+            'phone_number': request.POST['phone_number'],
+            'country': request.POST['country'],
+            'postcode': request.POST['postcode'],
+            'town_or_city': request.POST['town_or_city'],
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
-            'town_or_city': request.POST['town_or_city'],
-            'postcode': request.POST['postcode'],
-            'phone_number': request.POST['phone_number'],
+            'county': request.POST['county'],
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
@@ -77,7 +79,8 @@ def checkout(request):
         order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. Did you forget to set in your env?')
+        messages.warning(request, 'Stripe public key is missing. \
+            Did you forget to set it in your environment?')
 
     template = 'checkout/checkout.html'
     context = {
