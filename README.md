@@ -129,6 +129,26 @@ Was bringing through the items loop information
 <img src="media/Quantity_amount.png" width="50%"><img src="media/Quantity_amount2.png" width="50%">
 I checked the items dictionary but the error was in the contexts.py file where ‘item_data’ was written instead of ‘quantity’ which then pulled through the quantity value to the Cart.
 
+
+2)
+
+Following the install of ‘allauth’ upon attmepting to run the code I was faced with this error.
+<img src="media/all_auth1.png" width="50%"><img src="media/all_auth2.png" width="50%">
+A common fault with ‘allauth’ is the SITE_ID in settings therefore where as the default is = 1 and ‘allauth’ then finds the site, this wasn’t happening therefore I was advised to change this to = 2 which corrected the problem.
+
+3) In order to display the products images, it was required that the exact product field name was added to the code. Since I added an additional image to the Django database under the ‘Products’ model then there would be a need to change the image field name to that respective name. Upon click of the product image 1, the site then directs us to a product detail page where the second image for the product would then show.
+<img src="media/product_image1.png" width="50%"><img src="media/product_image2.png" width="50%">
+In order to fix this and display the correct image field, I adjusted the {% if product.image %} which accounts for image field in Django database to the Image 2 field in the Django database which then displayed the correct image under the Products header.
+
+4) Unable to display ‘Toast’ messages. Console shows that toast is not a function.
+
+The message-container does not show in the HTML but I tested this by adding it into the home/index.html and the elements section under Inspect in browser shows the message-container comes through but the same error message exists in the console. I tried changing the order of importance with Jquery script but this also did nothing.
+<img src="media/toast_function.png" width="50%">
+Since I could not resolve this issue I have added this message function in the ‘Nice to have features’ for future projects of similar nature.
+Adding a print statement to the ‘add to cart’ function in the cart views.py renders the return in the terminal but it doesn’t prompt the execute of the toast function.
+After some research and discussion it seems that the issue with 'Toasts' is in relation to the current Bootstrap5 program which would render the toast function useless. I was advised to incorporate script link to Bootstrap4 in order for the toast messages to be successful but decided against this as the templates and css were already setup and adjusted to work with Bootstrap5.
+
+
 ## Account creation
 
 
