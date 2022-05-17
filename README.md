@@ -148,6 +148,8 @@ Since I could not resolve this issue I have added this message function in the �
 Adding a print statement to the ‘add to cart’ function in the cart views.py renders the return in the terminal but it doesn’t prompt the execute of the toast function.
 After some research and discussion it seems that the issue with 'Toasts' is in relation to the current Bootstrap5 program which would render the toast function useless. I was advised to incorporate script link to Bootstrap4 in order for the toast messages to be successful but decided against this as the templates and css were already setup and adjusted to work with Bootstrap5.
 
+5)
+
 
 ## Account creation
 
