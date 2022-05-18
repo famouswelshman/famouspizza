@@ -43,6 +43,21 @@ p {
     color: antiquewhite;
     text-align: center;
 }
+/*------------- Logout Page -------------------*/
+
+.logout-card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    width: 40%;
+    text-align: center;
+    margin-top: 200px;
+    color: white;
+    padding: 50px;
+    font-family: 'Comfortaa', cursive;
+}
+
+/*------------------------------------------------*/
 
 .card-body {
     text-align: center;
