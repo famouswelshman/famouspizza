@@ -18,6 +18,11 @@ h1 {
     font-family: 'Comfortaa', cursive;
 }
 
+h2 {
+    font-family: 'Comfortaa', cursive;
+    color: black;
+}
+
 h4 {
     font-family: 'Comfortaa', cursive;
 }
@@ -31,7 +36,11 @@ p {
 }
 
 .delivery-banner {
-    padding: 0;
+    height: 50px;
+    background-color: #000;
+    color: white;
+    margin-top: 0;
+    top: 0;
 }
 
 .tagline {
@@ -245,7 +254,6 @@ a:link {
 .navbar {
     width: 100%;
     position: absolute;
-    top: 0;
 }
 /*------------- PRODUCT DETAILS PAGE ------------------------------*/
 
