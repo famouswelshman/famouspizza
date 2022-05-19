@@ -1,3 +1,38 @@
 h1 {
-    color: blueviolet;
+    font-family: 'Comfortaa', cursive;
+}
+
+h4 {
+    font-family: 'Comfortaa', cursive;
+}
+
+p {
+    color: white;
+    font-family: 'Comfortaa', cursive;
+}
+
+.bag-container {
+    max-width: 80%; 
+    margin: 1em auto; 
+    background:#FFF; 
+}
+
+.leftside, 
+.rightside {
+    height: 50vh;
+    width: 100%;
+}
+
+.leftside {
+    
+}
+
+.rightside {
+    
+}
+
+@media (min-width: 768px)  {
+.leftside, .rightside {
+    height: 100vh;
+    }
 }
