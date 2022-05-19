@@ -1,6 +1,6 @@
 html {
     height: 100%;
-    background-color: #000;
+    background-color: #555;
 }
 
 body {
@@ -28,6 +28,10 @@ p {
 
 .button1 {
     top: 500px;
+}
+
+.delivery-banner {
+    padding: 0;
 }
 
 .tagline {
@@ -188,6 +192,12 @@ p {
 
 .remove-item {
     cursor: pointer;
+}
+
+.col-sm-6 {
+    border-style: dashed;
+    color: white;
+    padding-bottom: 20px;
 }
 
 /*------------- LINKS ACTIONS ----------*/
