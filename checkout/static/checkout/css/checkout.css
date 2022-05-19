@@ -9,12 +9,12 @@ h1 {
 }
 
 p {
-    color: whitesmoke;
+    color: black;
 }
 
 .form-check-label {
     color: black;
-    
+
 }
 .text-box {
     padding: 5px;
@@ -26,16 +26,8 @@ p {
     width: 100%;
 }
 
-.leftside {
-    background: url('/media/main_background_pic_dark.jpg') no-repeat center;
-    color: white;
-    text-align: center;
-}
-
-.rightside {
-    color: white;
-    background-color: black;
-    text-align: center;
+.overlay {
+    opacity: 0.8;
 }
 
 .fieldset {
@@ -45,6 +37,10 @@ p {
 .text-box {
     width: 50%;
     text-align: center;
+}
+
+#boxed {
+    border-style: ridge;
 }
 
 .items-table {
@@ -131,6 +127,11 @@ select option[value=""] {
     justify-content: center;
     margin: 0;
     height: 100%;
+}
+
+#payment {
+    border-style: ridge;
+    background-color: white;
 }
 
 /*-------------------- SUUCESSFUL CHECKOUT----------------*/
