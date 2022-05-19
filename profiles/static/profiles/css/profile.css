@@ -1,0 +1,11 @@
+.bag-container {
+    max-width: 100%; 
+    margin: 1em auto; 
+    background:#FFF; 
+    padding:30px;
+    border-radius:5px;
+}
+
+.container-sm {
+    background-color: blue;
+}
