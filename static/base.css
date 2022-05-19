@@ -1,6 +1,6 @@
 html {
     height: 100%;
-    background-color: #555;
+    background-color: #333333;
 }
 
 body {
@@ -33,14 +33,6 @@ p {
 
 .button1 {
     top: 500px;
-}
-
-.delivery-banner {
-    height: 50px;
-    background-color: #000;
-    color: white;
-    margin-top: 0;
-    top: 0;
 }
 
 .tagline {
@@ -113,7 +105,6 @@ p {
 }
 
 .product-container {
-    border-style: dashed;
     padding: 50px;
 }
 
@@ -129,7 +120,7 @@ p {
 .footer {
     position:fixed;
     bottom: 0;
-    background-color: #555;
+    background-color: #333333;
     width:max-content;
     height: 100px;
 }
@@ -164,7 +155,6 @@ p {
 }
 
 .col-md-6 img {
-    border-style: dotted;
     color: #fff;
     
 }
@@ -187,6 +177,7 @@ p {
 
 .category-box {
     text-align: center;
+    padding-top: 20px;
 }
 
 .card-footer {
@@ -204,7 +195,6 @@ p {
 }
 
 .col-sm-6 {
-    border-style: dashed;
     color: white;
     padding-bottom: 20px;
 }
@@ -242,7 +232,6 @@ a:link {
 }
 
 .container-deals {
-    border-style: dashed;
     color: white;
 }
 

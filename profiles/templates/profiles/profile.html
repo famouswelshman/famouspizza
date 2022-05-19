@@ -38,9 +38,45 @@
 		<div class="rightside">
             <div class="bag-container"> 
                 <h1>My Order History</h1>
-                <p class="text-muted">My Orders</p>
-                    {{ orders }}
-                
+                <br>
+                    <div class="col-12 col-lg-6">
+                        <p class="text-muted">My Orders</p>
+                        <div class="order-history table-responsive">
+                            <table class="table table-sm table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th>Order Number</th>
+                                        <th>Date</th>
+                                        <th>Items</th>
+                                        <th>Order Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for order in orders %}
+                                    <tr>
+                                        <td>
+                                            <a href="{% url 'order_history' order.order_number %}" 
+                                            title="{{ order.order_number }}">
+                                            {{ order.order_number|truncatechars:6 }}
+                                        </a>
+                                        </td>
+                                        <td>{{ order.date }}</td>
+                                            <ul class="list-unstyled">
+                                            {% for item in order.lineitems.all %}
+                                                <li class="small">
+                                                    {% if item.product.has_sizes %}
+                                                    Size {{ item.product.size|upper }}
+                                                    {% endif %}{{ item.product.name}} x{{ item.quantity }}
+                                                </li>
+                                            {% endfor %}
+                                            </ul>
+                                        <td>£{{ order.grand_total }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                  </div>
 	</div>
 	</div>
@@ -50,6 +86,7 @@
     <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
 
-
-
 {% endblock %}
+
+
+
