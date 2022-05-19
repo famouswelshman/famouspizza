@@ -4,14 +4,18 @@ body {
     height: auto;
 }
 
+h1 {
+    color: black;
+}
+
 p {
-    color: #000;
+    color: whitesmoke;
 }
 
-h5 {
-    color: white;
+.form-check-label {
+    color: black;
+    
 }
-
 .text-box {
     padding: 5px;
 }
@@ -23,17 +27,15 @@ h5 {
 }
 
 .leftside {
-    background-color: aqua;
+    background: url('/media/main_background_pic_dark.jpg') no-repeat center;
+    color: white;
+    text-align: center;
 }
 
 .rightside {
-    
-}
-
-@media (min-width: 768px)  {
-.leftside, .rightside {
-    height: 100vh;
-    }
+    color: white;
+    background-color: black;
+    text-align: center;
 }
 
 .fieldset {
@@ -50,7 +52,7 @@ h5 {
 }
 
 .cart-container {
-    padding: 50px;
+    padding: 0px;
 }
 
 .fieldset-label {
@@ -59,12 +61,6 @@ h5 {
 
 .form-check {
     text-align: left;
-}
-
-@media (min-width: 768px)  {
-.leftside, .rightside {
-    height: 100vh;
-    }
 }
 
 /*---------- STRIPE CSS (Stripe.com)------------------*/
@@ -152,19 +148,12 @@ select option[value=""] {
 
 /*-------------------- MEDIA QUERIES -------*/
 
-@media screen and (min-width: 568px) {
-    .leftside, .rightside {
-         height:100vh;
+@media screen and (min-width: 768px) {
+.leftside, .rightside {
+    height:100vh;
     }
 }
 
 
-.leftside {
-    background: url('/media/main_background_pic_dark.jpg') no-repeat center;
-    color: white;
-}
 
-.rightside {
-    background-color: black;
-}
 
