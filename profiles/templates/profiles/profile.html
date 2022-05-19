@@ -6,35 +6,10 @@
 {% endblock %}
 
 {% block page_header %}
+<h1>THIS IS TEST</h1>
 {% endblock %}
 
 
 {% block content %}
-<div class="container-sm">
-   <div class="bag-container"> 
-  <h1>My Profile</h1>
 
-  <div class="row align-items-start">
-    <div class="col">
-	<p class="text-muted">Default Delivery Information</p>
-	<form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
-                {% csrf_token %}
-                {{ form|crispy }}
-            
-                <div class="cart-buttons">  
-                    <a href=""><button id="update">Update</button></a>
-                    <a href="{% url 'home' %}"><button id="home">Home</button></a>
-                  </div>
-            </form>
-    </div>
-    <div class="col">
- 	<div class="col-12 col-lg-6">
-                <p class="text-muted">Order History</p>
-                {{ orders }}
-        </div>
-
-    </div>
-    </div>
-    </div>
-</div>        
 {% endblock %}
