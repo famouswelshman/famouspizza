@@ -7,7 +7,7 @@ body {
     background: url('/media/main_background_pic_dark.jpg') no-repeat center;
     background-size: cover;
     margin-left: 0;
-    height: calc(100vh - 164px);
+    height: calc(100vh);
     color: #555;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     -webkit-text-size-adjust: 100%;
@@ -318,19 +318,12 @@ button:hover, button:focus, button:active, input[type="submit"]:hover, input[typ
     cursor: pointer;
 }
 
-/*------------------ Messages Toasts --------------------*/
+/*------------------ Messages Toasts (Supplied by Bootstrap5 --------------------*/
 
-.btt-link,
-.remove-item {
-    cursor: pointer;
-}
-
-.custom-toast {
-    overflow: visible;
-}
-
-.toast-capper {
-    height: 2px;
+.toast {
+    font-family: 'Comfortaa', cursive;
+    color: black;
+    background-color: #F38630;
 }
 
 .message-container {

@@ -51,7 +51,20 @@
                                             <i class="fas fa-pizza-slice"></i><br>{{ product.category.friendly_name }}
                                         </a>
                                         {% endif %}
-                                        
+                                        {% if request.user.is_superuser %}
+                                        <div class="row">
+                                            <div class="col align-self-center">
+                                                    <a href="{% url 'edit_product' product.id %}">Edit</a>
+                                
+                                                    <div class="col align-self-center">
+                                          
+                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+        
+                                            </div>
+                                               
+                                            </div>
+                                        </div>
+                                        {% endif %}
                                     <div class="buy-button">
                                         <a href="{% url 'product_detail' product.id %}">
                                         <button type="button" class="btn btn-secondary btn-sm">View Details</button></a>
