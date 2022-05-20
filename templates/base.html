@@ -147,8 +147,11 @@
       {% endblock %}
   
       {% block postloadjs %}
+    
       <script type="text/javascript"> 
         const main = { 
+          // The following code was provided by Bootstrap5 in order for their version of Toasts to work on this application //
+          
           // Remove any toast elements 
             remove: () => { 
               let toasts = document.querySelectorAll('.toast'); 

@@ -130,9 +130,7 @@ Was bringing through the items loop information
 I checked the items dictionary but the error was in the contexts.py file where ‘item_data’ was written instead of ‘quantity’ which then pulled through the quantity value to the Cart.
 
 
-2)
-
-Following the install of ‘allauth’ upon attmepting to run the code I was faced with this error.
+2) Following the install of ‘allauth’ upon attmepting to run the code I was faced with this error.
 <img src="media/all_auth1.png" width="50%"><img src="media/all_auth2.png" width="50%">
 A common fault with ‘allauth’ is the SITE_ID in settings therefore where as the default is = 1 and ‘allauth’ then finds the site, this wasn’t happening therefore I was advised to change this to = 2 which corrected the problem.
 
@@ -141,12 +139,13 @@ A common fault with ‘allauth’ is the SITE_ID in settings therefore where as 
 In order to fix this and display the correct image field, I adjusted the {% if product.image %} which accounts for image field in Django database to the Image 2 field in the Django database which then displayed the correct image under the Products header.
 
 4) Unable to display ‘Toast’ messages. Console shows that toast is not a function.
-
 The message-container does not show in the HTML but I tested this by adding it into the home/index.html and the elements section under Inspect in browser shows the message-container comes through but the same error message exists in the console. I tried changing the order of importance with Jquery script but this also did nothing.
 <img src="media/toast_function.png" width="50%">
 Since I could not resolve this issue I have added this message function in the ‘Nice to have features’ for future projects of similar nature.
 Adding a print statement to the ‘add to cart’ function in the cart views.py renders the return in the terminal but it doesn’t prompt the execute of the toast function.
 After some research and discussion it seems that the issue with 'Toasts' is in relation to the current Bootstrap5 program which would render the toast function useless. I was advised to incorporate script link to Bootstrap4 in order for the toast messages to be successful but decided against this as the templates and css were already setup and adjusted to work with Bootstrap5.
+
+Updated - The toasts issue has since been corrected by incorporating Bootstrap5 default Toast Javascript and HTML to enable any messages in relation to the views.py page to render these Toast card messaged where they are applicable. I edited the HTML layout to suit the applications needs and in this instance are simplified to show text. Further research would be useful to use them to their full extent with images and design.
 
 5)
 
