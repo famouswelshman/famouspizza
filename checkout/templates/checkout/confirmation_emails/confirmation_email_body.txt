@@ -1,0 +1,28 @@
+Hi {{ order.full_name }}
+
+Thank you for your order. This email is confirmation that we received your order. Please find the details below.
+
+Order Reference Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: £{{ order.order.total }}
+Delivery Charge (If applies): £{{ order.delivery_cost }}
+Grand Total: £{{ order.grand_total }}
+
+Your order will be delivered to the address that you confirmed below:
+{{ order.street_address1 }}
+{{ order.street_address2 }}
+{{ order.town_or_city }}
+{{ order.county }}
+
+Your contact number is: {{ order.phone_numbe }}.
+
+If you have any questions or queries then please contact us at: FamousPizza@yahoo.co.uk or contact us on: 01443 215678
+
+Thank you for your Famous Pizza order and enjoy.
+
+Sincerely,
+
+Famous Pizza
+
+

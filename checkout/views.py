@@ -5,9 +5,10 @@ from django.conf import settings
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
+
 from products.models import Product
-from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
+from profiles.forms import UserProfileForm
 from cart.contexts import cart_contents
 
 import stripe
@@ -25,7 +26,8 @@ def cache_checkout_data(request):
         })
         return HttpResponse(status=200)
     except Exception as e:
-        messages.error(request, 'Sorry, your payment cannot be processed right now. Please try again later.')
+        messages.error(request, 'Sorry, your payment cannot be \
+            processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
 
 
@@ -47,6 +49,7 @@ def checkout(request):
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
         }
+
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
@@ -75,19 +78,22 @@ def checkout(request):
                             order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your cart was not found in database")
+                        "One of the products in your cart wasn't found in our database. "
+                        "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_cart'))
 
+           # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, "There was an error with your form!")
+            messages.error(request, 'There was an error with your form. \
+                Please double check your information.')
     else:
         cart = request.session.get('cart', {})
         if not cart:
-            messages.error(request, "There is nothing in your cart")
+            messages.error(request, "There's nothing in your cart at the moment")
             return redirect(reverse('products'))
 
         current_cart = cart_contents(request)
@@ -99,6 +105,7 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
+        # Attempt to prefill the form with any info the user maintains in their profile
         if request.user.is_authenticated:
             try:
                 profile=UserProfile.objects.get(user=request.user)
@@ -164,8 +171,8 @@ def checkout_success(request, order_number):
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
 
-    if 'bag' in request.session:
-        del request.session['bag']
+    if 'cart' in request.session:
+        del request.session['cart']
 
     template = 'checkout/checkout_success.html'
     context = {
