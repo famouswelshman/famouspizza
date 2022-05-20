@@ -29,16 +29,26 @@ def add_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             if size in cart[item_id]['items_by_size'].keys():
                 cart[item_id]['items_by_size'][size] += quantity
-
+                messages.success(request,
+                                 (f'Updated size {size.upper()} '
+                                  f'{product.name} quantity to '
+                                  f'{cart[item_id]["items_by_size"][size]}'))
             else:
                 cart[item_id]['items_by_size'][size] = quantity
-             
+                messages.success(request,
+                                 (f'Added size {size.upper()} '
+                                  f'{product.name} to your bag'))
         else:
             cart[item_id] = {'items_by_size': {size: quantity}}
-            
+            messages.success(request,
+                             (f'Added size {size.upper()} '
+                              f'{product.name} to your cart'))
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
+            messages.success(request,
+                             (f'Updated {product.name} '
+                              f'quantity to {cart[item_id]}'))
         
         else:
             cart[item_id] = quantity
@@ -61,6 +71,7 @@ def remove_from_cart(request, item_id):
             del cart[item_id]['items_by_size'][size]
             if not cart[item_id]['items_by_size']:
                 cart.pop(item_id)
+                         
         else:
             cart.pop(item_id)
             messages.success(request, f'Removed {product.name} from your cart')
