@@ -45,10 +45,12 @@
           </li>
         </ul>
 
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+        <form method="GET" class="d-flex" action="{% url 'products' %}">
+          <input class="form-control me-2" type="text" name="q" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search
+          </button>
         </form>
+        
         <li class="list-inline-item">
           <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
             <div class="text-center">
