@@ -9,9 +9,8 @@
     <div class="products-overlay">
    <div class="bag-container"> 
   <h1>Your Order Shopping Cart</h1>
-
  
-            {% if cart_items %}
+      {% if cart_items %}
        <div class="cart-container">
          <h2></h2>
          <table>
@@ -20,22 +19,18 @@
       {% else %}
               <h2>Your Cart is currently empty.</h2>
             {% endif %}
-     
-                <table class="items-table">
-                  <thead>
-                    
-                    <tr>
-                      <th scope="col">Item</th>
-                      <th scope="col">Size</th>
-                      <th scope="col">Price</th>
-                      <th scope="col">Quantity</th>
-                      <th scope="col"></th>
-                    </tr>
-    
-                  </thead>
-                  <tbody>
-
-
+            <table class="items-table">
+              <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Size</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                
                 <tr>
             {% for item in cart_items %}
                   <td scope="row">{{ item.product.name }}</td>
@@ -53,7 +48,6 @@
             </table>
         </tr>
            </thead>
-          </div>
            <tbody id="carttable">
            </tbody>
          </table>
@@ -72,33 +66,14 @@
            </tr></table>
              {% endif %}
            
-     
+         <div class="cart-buttons">  
            <button id="emptycart">Empty Cart</button>
 
            <a href="{% url 'checkout' %}"><button id="checkout">Checkout</button></a>
 
-
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+         </div>
+      </div>
+</div>
 
 
 {% endblock %}
