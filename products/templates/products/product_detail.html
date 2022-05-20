@@ -29,10 +29,8 @@
                         </h1>
                         <div class="fs-5 mb-5">
                         {% if product.category %}
-                        <div class="category">
-                            <a href="{% url 'products' %}?category={{ product.category.name }}">
-                                <i class="fas fa-pizza-slice"></i>{{ product.category.friendly_name }}</a>
-                            </div>
+                        {{ product.category.friendly_name }}
+
                         {% endif %}
                         <div class="product-code">Product Number: {{ product.id }}</div>
                     {% else %}
@@ -42,7 +40,7 @@
                         <span class="product-detail-price">£{{ product.price }}</span>
                         </div>
                         {% if product.category %}
-                        <a href="{% url 'products' %}?category={{ product.category.name }}"><h2>All Sizes</h2></a>
+                        <a href="{% url 'products' %}?category={{ product.category.name }}"></a>
                         {% endif %}
                         <p class="lead">{{ product.description }}</p>
 
@@ -92,6 +90,7 @@
 
 
         <!-- Related items section-->
+        {% if product.category %}       
         <section class="py-5 bg-light">
             <div class="container px-4 px-lg-5 mt-5">
                 <h2 class="fw-bolder mb-4">Related products</h2>
@@ -99,19 +98,20 @@
                     <div class="col mb-5">
                         <div class="card h-100">
 
+                            {% if product.image_2 %}
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            
+                            <img class="card-img-top" src="{{ product.image_2.url }}" alt="..." />
+                            {% endif %}
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
+                                    <h5 class="fw-bolder">{{ product.name }}</h5>
                                     <!-- Product price-->
                                     $40.00 - $80.00
                                 </div>
                             </div>
-
+        {% endif %}
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>

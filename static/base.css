@@ -101,7 +101,7 @@ p {
 
 .product-detail-title {
     font-family: 'Comfortaa', cursive;
-    font-size: 80px;
+    font-size: 50px;
     text-align: left;
     color: white;
     margin: auto;
@@ -180,11 +180,11 @@ p {
     background: black;
     z-index: -1;
     padding-top: 50px;
+    border-style: dotted;
 }
 
 .category {
-    font-size: 15px;
-    padding-top: 5px;
+    font-size: 5px;
 }
 
 .category-box {
@@ -268,6 +268,7 @@ a:link {
 .items-table {
     text-align: center;
     font-family: 'Comfortaa', cursive;
+    border-style: dotted;
 }
 
 .bag-container {
@@ -275,7 +276,9 @@ a:link {
     margin: 1em auto; 
     background:#FFF; 
     padding:30px;
+    margin-top: 100px;
     border-radius:5px;
+    border-style: dotted;
 }
 
 .productcont {
@@ -380,7 +383,7 @@ table td:nth-last-child(1) {
 @media (min-width: 375px)  {
 .tagline {
     font-family: 'Comfortaa', cursive;
-    font-size: 80px;
+    font-size: 40px;
     color: white;
     margin-top: 10px;
     text-align: center;
@@ -395,7 +398,7 @@ table td:nth-last-child(1) {
 @media (min-width: 568px)  {
 .tagline {
     font-family: 'Comfortaa', cursive;
-    font-size: 80px;
+    font-size: 40px;
     color: white;
     margin-top: 10px;
     text-align: center;
@@ -405,7 +408,7 @@ table td:nth-last-child(1) {
 @media (min-width: 736px)  {
 .tagline {
     font-family: 'Comfortaa', cursive;
-    font-size: 80px;
+    font-size: 40px;
     margin-top: 10px;
     color: white;
     text-align: center;
@@ -415,7 +418,7 @@ table td:nth-last-child(1) {
 @media (min-width: 992px)  {
 .tagline {
     font-family: 'Comfortaa', cursive;
-    font-size: 80px;
+    font-size: 100px;
     color: white;
     margin-top: 10px;
     text-align: center;
