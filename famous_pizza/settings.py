@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-4h-p=zi(ka($q=k2q3*rzheecgnp8)8ua#4d!@u^fb#r8e443p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["famous-pizza.herokuapp.com"]
+ALLOWED_HOSTS = ['famous-pizza.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -185,7 +185,7 @@ if 'USE_AWS' in os.environ:
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
-    
+
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'famous-pizza'
     AWS_S3_REGION_NAME = 'eu-west-2'
