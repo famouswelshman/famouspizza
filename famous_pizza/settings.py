@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '9mrbhb$!!&$vo(81g=r((0c-oi%m72twfbs0mw9njf_m5phipx')
+SECRET_KEY = os.environ.get('SECRET_KEY', 'be92f7eb-81ac-4f98-97f0-910e68d7aecc')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-#ALLOWED_HOSTS = ['famous-pizza.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['famous-pizza.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -125,17 +125,14 @@ WSGI_APPLICATION = 'famous_pizza.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+}
+
+
 
 
 # Password validation
