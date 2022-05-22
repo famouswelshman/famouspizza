@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '9mrbhb$!!&$vo(81g=r((0c-oi%m72twfbs0m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['famous-pizza.herokuapp.com', 'localhost']
+#ALLOWED_HOSTS = ['famous-pizza.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'deals',
     'checkout',
     'profiles',
+    'widget_tweaks',
 
     # Other
     'crispy_forms',
