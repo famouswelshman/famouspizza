@@ -39,7 +39,7 @@
             <div class="bag-container"> 
                 <h1>My Order History</h1>
                 <br>
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12">
                         <p class="text-muted">My Orders</p>
                         <div class="order-history table-responsive">
                             <table class="table table-sm table-borderless">
@@ -47,7 +47,6 @@
                                     <tr>
                                         <th>Order Number</th>
                                         <th>Date</th>
-                                        <th>Items</th>
                                         <th>Order Total</th>
                                     </tr>
                                 </thead>
@@ -65,7 +64,7 @@
                                             {% for item in order.lineitems.all %}
                                                 <li class="small">
                                                     {% if item.product.has_sizes %}
-                                                    Size {{ item.product.size|upper }}
+                                                    {{ item.product.size|upper }}
                                                     {% endif %}{{ item.product.name}} x{{ item.quantity }}
                                                 </li>
                                             {% endfor %}

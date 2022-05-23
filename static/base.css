@@ -33,11 +33,12 @@ p {
 
 #delivery-banner {
     font-size: .9rem;
-    position: absolute;
-    top: 50px;
     width: 100%;
     margin: 0;
     background-color: black;
+    position:sticky;
+	top: 50px;
+    flex-shrink: initial;
 }
 
 .button1 {
@@ -114,7 +115,7 @@ p {
 }
 
 .product-container {
-    padding: 50px;
+    padding: 10px;
 }
 
 .buy-button {
@@ -180,7 +181,7 @@ p {
     background: black;
     z-index: -1;
     padding-top: 50px;
-    border-style: dotted;
+    overflow: visible;
 }
 
 .category {
@@ -189,7 +190,7 @@ p {
 
 .category-box {
     text-align: center;
-    padding-top: 20px;
+    margin-top: 100px;
 }
 
 .card-footer {
@@ -209,6 +210,11 @@ p {
 .col-sm-6 {
     color: white;
     padding-bottom: 20px;
+}
+
+.row-card {
+    width: 100%;
+    padding-top: 10px;
 }
 
 /*------------- LINKS ACTIONS ----------*/
@@ -404,7 +410,7 @@ table td:nth-last-child(1) {
 
 /*-------------------------- Product add, edit and Delete Pages ---------*/
 
-.product-container {
+.product-edit-container {
     width: 100%;
     margin: 1em auto; 
     background:#FFF; 
@@ -412,6 +418,11 @@ table td:nth-last-child(1) {
     margin-top: 100px;
     border-radius:5px;
 }
+
+.product-overlay {
+    background-color: #F38630;
+}
+
 
 /*---------------------- Media Sizing ------------------------*/
 
