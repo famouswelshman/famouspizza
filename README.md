@@ -108,19 +108,19 @@ My design and styling idea for a pizza ordering service had to include some rust
 
 # Code Validation
 ## HTML
-HTML code for all pages passed through W3C Markup Checker shows some warnings and errors in relation to Jinja templating. I have also been made aware of some divs which
-remain open but closing these completely corrupts the display of the containers, something I learnt late in the project before submit.
+HTML code for all pages passed through W3C Markup Checker shows some warnings and errors in relation to python loop script in some templates.
 
 ## CSS
-
+CSS code passed via WC3 CSS Validator with no errors.
 
 ## Javascript
-
+Checked via Jshint.com and no errors
 
 --------------------------------------------------------------------------------------------------------
 
 # Testing
 
+Testing for this project was done using Developer tools in browser via Chrome. I find that Developer tools to be precise and in depth. The use of the console was uselful in identifying any Javascript related issues and for any errors during payment transactions to STRIPE. 
 ## Bugs
 
 1) Quantity amount not displayed in the cart.html. The variable used here was {{ item.quantity }} which 
@@ -154,27 +154,31 @@ Updated - The toasts issue has since been corrected by incorporating Bootstrap5 
 
 
 ## Functionality
+The website overall has good functionality. Although limited it provides the user with the ability to navigate and then select or remove suitable items until checkout. The user has a short journey in creating an account and then being able to checkout with payment. The search function could be more refined and the menu with all products might be a little clumsy but this was due to time constraints. The website functions albeit with some minor bugs such as the button to remove 'all items' which was not corrected due to lack of time before submit.
 
-
-## HTML
-
-
-## CSS
-
+## HTML & CSS
+The HTML and CSS layout of this website is a combination of the Django tutorial and Bootstrap pre-bulit templates as referenced (below). The layout provides adequate informationa and function but could be refined.
 
 ## Javascript
+The limited javascript included in this project is specific to the Toasts message popups upon actions and the item removal button. Javascript is also included in order to provide the time spinner overlay during the payment process. The Toast javascript used in this project was provided by Bootstrap5 and is reference below. It was not possible to use the Toast scripts as per the tutorial since I was using Bootstrap5 and this was not compatible.
 
 ## Django
-Project Apps
+Creation of models where:
+Categories and Products.
 
-Cart
-Products
+These sat in Django database and hosted the products details along with image files. Categories allowed me to group these products under their respective category in order to group and display in the front end website.
+
+Django recorded any orders created along with payment details and order details.
+Django DB shows any users created along with super user and had options for user access levels.
+
+
+# STRIPE (Payment Facility)
+The use of STRIPE as a payment transaction provider was essential in the development of the project. Although setup of STRIPE to communicate with Django proved to be a challenge the result was a intuitive payment platform that would process payment and reflect this in the Django database along with the product order. STRIPE made it easy to view any payments which were either successful and unsuccessful.
 
 # Project Challenges
->
->
->
->
+My main challenges during the project were getting to grips with Django and it's app setup. Django follows a method of templates relating to views and this was a learning curve.
+Creation of models and migrations to update the database meant that there was no room for any errors when setting these up.
+I didn't commit enough time to ensuring the application was responsive to all media. I found the project to be challenging enough not only getting to grips with Django but also the STRIPE payment process and much of my time was taken up with the process of deployment and the interaction between so many programs.
 
 
 # Deployment
@@ -202,7 +206,7 @@ Project setup in Github as a new repository which includes Readme and will refle
 I used Gitpod as an online IDE and utilized the Code Institute repository template to create my MS4 project. Throughout the project I would complete regular commits in order to record changes made within the project. The project required some library installations which were done within the terminal although python3 came pre-installed.
 
 ## Heroku
-I would use Heroku as a hosting platform for the completed project. 
+I would use Heroku as a web based hosting platform for the completed project. 
 
 
 
@@ -236,6 +240,8 @@ Deals Image used courtesy of - https://stock.adobe.com/uk/
 * Heroku used for deplyment of the application.
 * Shopping cart template was downloaded from - https://www.codehim.com/
 * Template for order details form credited to - https://colorlib.com/wp/bootstrap-form-templates/
+* AWS (https://aws.amazon.com/) for static file hosting.
+* STRIPE - Payment processing web based provider for use in e-commerce applications - (https://dashboard.stripe.com/test/dashboard)
 
 
 
