@@ -130,14 +130,6 @@ p {
     z-index: 99999999999;
 }
 
-.footer {
-    position:fixed;
-    bottom: 0;
-    background-color: #333333;
-    width:max-content;
-    height: 100px;
-}
-
 .col-left {
     text-align: left;
     color: white;
@@ -239,29 +231,7 @@ a:link {
   a:active {
     color: blue;
   }
-/*------------------ DEALS PAGE --------------------------*/
 
-.deals-tagline {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-    padding-top: 70px;
-}
-
-.container-deals {
-    color: white;
-}
-
-.container-row {
-    border-style: dotted;
-    color: yellow;
-}
-
-.navbar {
-    width: 100%;
-    position: absolute;
-}
 /*------------- PRODUCT DETAILS PAGE ------------------------------*/
 
 .dropdown {
