@@ -36,9 +36,7 @@ p {
     width: 100%;
     margin: 0;
     background-color: black;
-    position:sticky;
-	top: 50px;
-    flex-shrink: initial;
+    margin-top: -20px;
 }
 
 .button1 {
