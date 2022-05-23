@@ -1,8 +1,8 @@
 # MILESTONE 4 - Full Stack Frameworks with Django
 
-Github Link:
+Github Link: https://github.com/famouswelshman/famouspizza.git
 
-Website is hosted via Heroku and can be found via link :
+Website is hosted via Heroku and can be found via link : https://famous-pizza.herokuapp.com/
 
 # Purpose of this project – Milestone 4
 
@@ -178,15 +178,31 @@ Products
 
 
 # Deployment
+Deployment of the project required the creation of an AWS account and application setup within Heroku.
+I needed to ensure that the Json file within Gitpod included all the Django database information to port across to AWS.
+AWS account setup and navigated to S3 – (Simple storage service) to create bucket and store static files including css and product images.
+New app created in Heroku and Postgres created in order to link with dj_database and psycopg2 binary installations in Gitpod.
+DATABASE URL link added to Gitpod project settings, migrations run to ensure the transfer of database data followed by the loading of the categories and product data.
+and then setup deployment 
+
+Super User account setup for access following deployment to Heroku.
+Postgres removed from settings.
+Gunicorn installed as web server.
+Procfile created for Heroku to run Gunicorn and host Django app.
+Disabled collect static so that Heroku wont try and collect static files upon deployment
+Heroku project name added to settings ALLOWED_HOSTS as well as ‘localhost’ to ensure the site still ran within Gitpod.
+Deployment actioned by push to Heroku folowing login process.
+Heroku confirmed deployment complete and navigated to Heroku link to view the project in production.
+
 
 ## Github
-
+Project setup in Github as a new repository which includes Readme and will reflect all changes made within the repository during version control.
 
 # Gitpod
-
+I used Gitpod as an online IDE and utilized the Code Institute repository template to create my MS4 project. Throughout the project I would complete regular commits in order to record changes made within the project. The project required some library installations which were done within the terminal although python3 came pre-installed.
 
 ## Heroku
-
+I would use Heroku as a hosting platform for the completed project. 
 
 
 

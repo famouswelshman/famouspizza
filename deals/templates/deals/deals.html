@@ -1,61 +1,33 @@
-         
-{% extends "base.html" %}
-{% load static %}
-
-{% block page_header %}
-
-{% endblock %}
-
-{% block content %}
-  
-        <div class="deals-tagline">
-            <img src="/media/Deals_Logo.jpg" alt="deals picture" style="width:100%;">
-        </div>     
-        
-        <div class="row-card">
-            <div class="product-container col-10 offset-1">
-                <div class="row-card">
-                <div class="row">
-                {% for deal in all_deals %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card h-100 border-0">
-                            {% if deal.image %}
-                            <a href="">
-                                <img class="card-img-top img-fluid" src="{{ deal.image.url }}" alt="{{ deal.name }}">
-                            </a>
-                            {% else %}
-                            <a href="">
-                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ deal.name }}">
-                            </a>
-                            {% endif %}
-                            <div class="card-footer">
-                            <div class="card-body">
-                                <h2>{{ deal.name }}</h2>
-                            </div>
-                            <div class="card-footer bg-black pt-0 border-0 text-center">
-                                <div class="row">
-                                    <div class="col">
-                                        <p class="lead mb-0 text-left font-weight-bold">£{{ deal.price }}</p>
-                                    <p>{{ deal.description }}</p>
-                                    </div>
-
-                                        {% if deal.category %}
-                                        <a href="">
-                                            <i class="fas fa-pizza-slice"></i><br></a>
-                                        {% endif %}
-                                        
-                                    <div class="buy-button">
-                                        <a href="">
-                                        <button type="button" class="btn btn-secondary btn-sm">Add to Order</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+{% extends "base.html" %} {% load static %} {% block page_header %} {% endblock %} {% block content %} <div class="deals-tagline">
+    <img src="/media/Deals_Logo.jpg" alt="deals picture" style="width:100%;">
+  </div>
+  <div class="row-card">
+    <div class="product-container col-10 offset-1">
+      <div class="row-card">
+        <div class="row"> {% for deal in all_deals %} <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card h-100 border-0"> {% if deal.image %} <a href="">
+                <img class="card-img-top img-fluid" src="{{ deal.image.url }}" alt="{{ deal.name }}">
+              </a> {% else %} <a href="">
+                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ deal.name }}">
+              </a> {% endif %} <div class="card-footer">
+                <div class="card-body">
+                  <h2>{{ deal.name }}</h2>
+                </div>
+                <div class="card-footer bg-black pt-0 border-0 text-center">
+                  <div class="row">
+                    <div class="col">
+                      <p class="lead mb-0 text-left font-weight-bold">£{{ deal.price }}</p>
+                      <p>{{ deal.description }}</p>
+                    </div> {% if deal.category %} <a href="">
+                      <i class="fas fa-pizza-slice"></i>
+                      <br>
+                    </a> {% endif %} <div class="buy-button">
+                      <a href="">
+                        <button type="button" class="btn btn-secondary btn-sm">Add to Order</button>
+                      </a>
                     </div>
-                    </div>
-           {% endfor %}
-       
-                           
-               
-
-{% endblock %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> {% endfor %} {% endblock %}
