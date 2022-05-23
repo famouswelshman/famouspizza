@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'be92f7eb-81ac-4f98-97f0-910e68d7aecc')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ['famous-pizza.herokuapp.com', 'localhost']
 
@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'deals',
     'checkout',
     'profiles',
-    'widget_tweaks',
 
     # Other
     'crispy_forms',
