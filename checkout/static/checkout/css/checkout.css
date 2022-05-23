@@ -130,7 +130,6 @@ select option[value=""] {
 }
 
 #payment {
-    border-style: ridge;
     background-color: white;
 }
 
@@ -138,13 +137,11 @@ select option[value=""] {
 
 .col-order-number {
     text-align: left;
-    border-style: dashed;
 }
 
 .col-order-detail {
     text-align: left;
     color: #000;
-    border-style: dashed;
 }
 
 /*-------------------- MEDIA QUERIES -------*/

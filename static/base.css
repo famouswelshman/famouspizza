@@ -278,7 +278,6 @@ a:link {
     padding:30px;
     margin-top: 100px;
     border-radius:5px;
-    border-style: dotted;
 }
 
 .productcont {
@@ -376,7 +375,43 @@ table td:nth-last-child(1) {
     margin:1em 0;
 }
 
+/* ----------------- SIGN UP PAGE ----------------------------*/
 
+.sign-up {
+    background-color:#F38630;
+    color: white;
+}
+
+.signup-container {
+    max-width: 60%; 
+    margin: 1em auto; 
+    background:#F38630; 
+    padding:30px;
+    margin-top: 100px;
+    border-radius:5px;
+}
+
+/* --------------------- SIGN IN PAGE ----------------------*/
+
+.signin-container {
+    max-width: 100%; 
+    margin: 1em auto; 
+    background:#F38630; 
+    padding:30px;
+    margin-top: 100px;
+    border-radius:5px;
+}
+
+/*-------------------------- Product add, edit and Delete Pages ---------*/
+
+.product-container {
+    width: 100%;
+    margin: 1em auto; 
+    background:#FFF; 
+    padding:10px;
+    margin-top: 100px;
+    border-radius:5px;
+}
 
 /*---------------------- Media Sizing ------------------------*/
 
