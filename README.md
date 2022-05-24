@@ -53,16 +53,19 @@ User can search via homepage searchbar for words which will then return all prod
 
 
 ## User Story 3
-User can setup an account via registration link which enables the customer to add or remove products from their checkout cart. Product information is restricted to the current customer and cannot be viewed by other account registered users. Registered users account details will be secure to their account.
+User can setup an account via registration link which enables the customer to generate their own unique profile. Product information is present on their profile and cannot be viewed by other users. Registered users account details will be secure to their account.
 Registered user can edit and delete their profile details. Registered user can logout of their account until next login.
 
 
 ## User Story 4
-Registered user/user can select item by size and quantity, which will then be added to their shopping cart, can also remove products and proceed to checkout.The user can then process payment of their order.
+Registered user can select item by size and quantity, which will then be added to their shopping cart. User can also remove products and proceed to checkout.The user can then process payment of their order.
 
 
 ## User Story 5
-User can logout from their account and return at another time to view their previous order products and details.
+User can logout from their account and return at another time to login and view their previous order products and details.
+
+## User story 6
+Super user account created therefore super user account can add, edit or delete product information in the backend database and access view of order details, payments and user login information.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -79,7 +82,6 @@ The front-end of the project website gives the user immediate view of the websit
 * Checkout cart view shows all itemised product, quantity, size and price making it clear to the user before checkout.
 * User ability to create and delete products in their shopping cart.
 * Ability to create and update user login/profile.
-
 
 ### Nice to have Features
 The project was setup to include a dropdown and function for recording one of three sizes per item. This was part of the model setup for products but since there would be a lot more, inctricate code required for functionality it was not explored further. Future projects would show that selection by size would have effect on the price range therefore an if statement would be required when adding to cart which would decide if by size = price and further functionailty would be availabe especially in instance such as my project where products would be ordered based on size/amount.
@@ -146,7 +148,7 @@ Updated - The toasts issue has since been corrected by incorporating Bootstrap5 
 
 
 ## Account creation
-
+User has the ability to sign up for their own account via the 'Sign Up' page. This process requires registration of an email and password and when setup an email would then be sent to the customer in order to validate their account details. Customer would then proceed to sign in to their account where certain information including order details and payment information would be retained by the backend system.
 
 ## Functionality
 The website overall has good functionality. Although limited it provides the user with the ability to navigate and then select or remove suitable items until checkout. The user has a short journey in creating an account and then being able to checkout with payment. The search function could be more refined and the menu with all products might be a little clumsy but this was due to time constraints. The website functions albeit with some minor bugs such as the button to remove 'all items' which was not corrected due to lack of time before submit.
@@ -158,14 +160,12 @@ The HTML and CSS layout of this website is a combination of the Django tutorial 
 The limited javascript included in this project is specific to the Toasts message popups upon actions and the item removal button. Javascript is also included in order to provide the time spinner overlay during the payment process. The Toast javascript used in this project was provided by Bootstrap5 and is reference below. It was not possible to use the Toast scripts as per the tutorial since I was using Bootstrap5 and this was not compatible.
 
 ## Django
-Creation of models where:
+Creation of models:
 Categories and Products.
 
-These sat in Django database and hosted the products details along with image files. Categories allowed me to group these products under their respective category in order to group and display in the front end website.
+Products and Categories setup in Django database and were responsible for hosting andy product details along facility to upload image files. Categories allowed me to group these products under their respective category in order to group and display in the front end website. The models are based on the Django 'Boutique-Ado' tutorial and although I did add a futher model under the heading of 'Deals', this was not intergrated since it required a whole new set of code to include this information in the checkout cart and payment process.
 
-Django recorded any orders created along with payment details and order details.
-Django DB shows any users created along with super user and had options for user access levels.
-
+Django database displays order information captured as a result of a successful checkout transaction via the website. Django database also housed 'User' information and email addresses.
 
 # STRIPE (Payment Facility)
 The use of STRIPE as a payment transaction provider was essential in the development of the project. Although setup of STRIPE to communicate with Django proved to be a challenge the result was a intuitive payment platform that would process payment and reflect this in the Django database along with the product order. STRIPE made it easy to view any payments which were either successful and unsuccessful.
@@ -175,7 +175,6 @@ My main challenges during the project were getting to grips with Django and it's
 Creation of models and migrations to update the database meant that there was no room for any errors when setting these up.
 I didn't commit enough time to ensuring the application was responsive to all media. I found the project to be challenging enough not only getting to grips with Django but also the STRIPE payment process and much of my time was taken up with the process of deployment and the interaction between so many programs.
 
-
 # Deployment
 Deployment of the project required the creation of an AWS account and application setup within Heroku.
 I needed to ensure that the Json file within Gitpod included all the Django database information to port across to AWS.
@@ -184,46 +183,44 @@ New app created in Heroku and Postgres created in order to link with dj_database
 DATABASE URL link added to Gitpod project settings, migrations run to ensure the transfer of database data followed by the loading of the categories and product data.
 and then setup deployment 
 
-Super User account setup for access following deployment to Heroku.
-Postgres removed from settings.
-Gunicorn installed as web server.
-Procfile created for Heroku to run Gunicorn and host Django app.
-Disabled collect static so that Heroku wont try and collect static files upon deployment
-Heroku project name added to settings ALLOWED_HOSTS as well as ‘localhost’ to ensure the site still ran within Gitpod.
-Deployment actioned by push to Heroku folowing login process.
-Heroku confirmed deployment complete and navigated to Heroku link to view the project in production.
-
+* Super User account setup for access following deployment to Heroku.
+* Postgres removed from settings.
+* Gunicorn installed as web server.
+* Procfile created for Heroku to run Gunicorn and host Django app.
+* Disabled collect static so that Heroku wont try and collect static files upon deployment
+* Heroku project name added to settings ALLOWED_HOSTS as well as ‘localhost’ to ensure the site still ran within Gitpod.
+* Deployment actioned by push to Heroku folowing login process.
+* Heroku confirmed deployment complete and navigated to Heroku link to view the project in production.
 
 ## Github
-Project setup in Github as a new repository which includes Readme and will reflect all changes made within the repository during version control.
+Project setup in Github as a new repository using the 'Code Institute' template which includes Readme file. Repository project will reflect all changes made during the project build in version control.
 
 # Gitpod
 I used Gitpod as an online IDE and utilized the Code Institute repository template to create my MS4 project. Throughout the project I would complete regular commits in order to record changes made within the project. The project required some library installations which were done within the terminal although python3 came pre-installed.
 
 ## Heroku
-I would use Heroku as a web based hosting platform for the completed project. 
+I would use Heroku as a web based hosting platform for the completed project. Heroku would hold secret keys to allow the Git version to communicate with its hosting platofrm and integrate AWS to display static files.
 
 
 
 # Media Credits
 
-# Credits
-Pizza Background Picture
-Photo by Eneida Nieves: https://www.pexels.com/photo/baked-pizza-on-pizza-peel-in-oven-905847/
-Pizza Variety photos from - https://www.pizzarecipe.org/different-types-of-pizza/
-Caprina Pizza Image - Photo by Vincent Rivaud: https://www.pexels.com/photo/top-view-photo-of-baked-pizza-2147491/
-Broccolli Pizza Img - https://www.KitchenKonfidence.com & https://www.streaminggourmet.com
-Proscuitto Pizza Img - Photo by Pixabay: https://www.pexels.com/photo/cheese-close-up-cooking-crispy-263041/
-Napolitana Pizza Img - Photo by Victor Miyata: https://www.pexels.com/photo/pizza-on-brown-wooden-table-3682837/
-Cheese Pizza Image - Photo by JÉSHOOTS: https://www.pexels.com/photo/dinner-fast-food-lunch-meal-3644/
+* Pizza Background Picture
+* Photo by Eneida Nieves: https://www.pexels.com/photo/baked-pizza-on-pizza-peel-in-oven-905847/
+* Pizza Variety photos from - https://www.pizzarecipe.org/different-types-of-pizza/
+* Caprina Pizza Image - Photo by Vincent Rivaud: https://www.pexels.com/photo/top-view-photo-of-baked-pizza-2147491/
+* Broccolli Pizza Img - https://www.KitchenKonfidence.com & https://www.streaminggourmet.com
+* Proscuitto Pizza Img - Photo by Pixabay: https://www.pexels.com/photo/cheese-close-up-cooking-crispy-263041/
+* Napolitana Pizza Img - Photo by Victor Miyata: https://www.pexels.com/photo/pizza-on-brown-wooden-table-3682837/
+* Cheese Pizza Image - Photo by JÉSHOOTS: https://www.pexels.com/photo/dinner-fast-food-lunch-meal-3644/
 
 
 ## Other Credits
-StartBootstrap - E-Commerce template downloaded and customized for project
-Google Fonts - Comfortaa Font for main website font styling
-Font Awesome - Logos and links
-Coca Cola, Fanta and Sprite Logos - Saved as images from Google Images - Logos are copyright protected used in this project for demonstration purposes.
-Deals Image used courtesy of - https://stock.adobe.com/uk/
+* StartBootstrap - E-Commerce template downloaded and customized for project
+* Google Fonts - Comfortaa Font for main website font styling
+* Font Awesome - Logos and links
+* Coca Cola, Fanta and Sprite Logos - Saved as images from Google Images - Logos are copyright protected used in this project for demonstration purposes.
+* Deals Image used courtesy of - https://stock.adobe.com/uk/
 
 ## Libraries used
 * Django / MySQL Database
