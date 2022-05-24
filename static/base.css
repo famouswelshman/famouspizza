@@ -236,6 +236,10 @@ a:link {
     font-family: 'Comfortaa', cursive;
   }
 
+.input-group {
+    border-style: dotted;
+    width: 400px;
+}
 
 /*-------------- Shopping Cart Page ----------------------------*/
 
