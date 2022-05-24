@@ -48,7 +48,8 @@
           </td> {% if free_delivery_delta > 0 %} <td>You just need to spend £{{ free_delivery_delta }} more for free delivery.</td>
         </tr>
       </table> {% endif %} <div class="cart-buttons">
-        <button id="emptycart">Empty Cart</button>
+        <a href="{% url 'products' %}">
+        <button id="emptycart">Back to Ordering</button></a>
         <a href="{% url 'checkout' %}">
           <button id="checkout">Checkout</button>
         </a>

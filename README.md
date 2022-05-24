@@ -20,15 +20,15 @@ Pizza order and delivery service.
 
 
 # Name Ideas
-Famouswelshman Pizzas
-Famous Pizza
-Pizza Time
+* Famouswelshman Pizzas
+* Famous Pizza
+* Pizza Time
 
 # Main Technologies
 
 ### Required: 
-HTML, CSS, JavaScript, Python+Django
-Relational Database(Recommending MySQL)
+HTML, CSS, JavaScript, Python + Django
+Relational Database (MySQL Recommended)
 Stripe Payments
 
 ### Optional
@@ -67,7 +67,7 @@ User can logout from their account and return at another time to view their prev
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Structure
-
+I took inspiration from the Code Insitute Django full frameworks tutorials and researched websites of similar content online. As a result the structure is fairly straightforward and standard given the homepage and its navigation links allowing users to quickly access either products by search or by clicking by button. The idea was to form a structured site allowing flow for the user from product search to product select and then to product purchase without too many steps in between. The structure of the application proved to be a challenge when attempting to make it responsive to all media which is always the case given far more people would be inclined to view this website on smaller media than desktop. 
 
 
 # Website UX
@@ -77,7 +77,7 @@ The front-end of the project website gives the user immediate view of the websit
 * Able to search homepage and reveal any products linked to the word or words used by search criteria.
 * Products are returned in groups such as 'Meat Eaters' and 'Vegetarian'.
 * Checkout cart view shows all itemised product, quantity, size and price making it clear to the user before checkout.
-* User ability to create, esit and delete products in their shopping cart.
+* User ability to create and delete products in their shopping cart.
 * Ability to create and update user login/profile.
 
 
@@ -85,9 +85,8 @@ The front-end of the project website gives the user immediate view of the websit
 The project was setup to include a dropdown and function for recording one of three sizes per item. This was part of the model setup for products but since there would be a lot more, inctricate code required for functionality it was not explored further. Future projects would show that selection by size would have effect on the price range therefore an if statement would be required when adding to cart which would decide if by size = price and further functionailty would be availabe especially in instance such as my project where products would be ordered based on size/amount.
 
 ## Future Features
-Bakcground animation - Pizza being cooked.
-
-
+Background animation - Pizza being cooked.
+Related products shown below product detail in relation to the category for instance if user selected a vegetarian pizza then related products would show other pizza products synonymous to that category.
 
 # MS4 Wireframes - Balsamic
 My design and styling idea for a pizza ordering service had to include some rustic background photos of said product being either cooked or served. I wanted to incorporate warm colours for images and background acentuating the fire and glow of a pizza oven. I chose the font that shows throughout the website as it gives a nice rounded feel to the text and a homely, earthy expression to the user. I attempted to call and display products in small card formats upon search or click and then show item details in full upon click. The background would remain throughout as a subtle backdrop and I purposely used dark color when there was no image present to highlight the text. I wanted to keep the shopping cart layout simple and responsive with the payment form easy to complete on all sized media. 
@@ -103,8 +102,6 @@ My design and styling idea for a pizza ordering service had to include some rust
 
 ---------------------------------------------------------------------------------------------------
 
-
-# VALIDATION
 
 # Code Validation
 ## HTML
@@ -146,8 +143,6 @@ Adding a print statement to the ‘add to cart’ function in the cart views.py 
 After some research and discussion it seems that the issue with 'Toasts' is in relation to the current Bootstrap5 program which would render the toast function useless. I was advised to incorporate script link to Bootstrap4 in order for the toast messages to be successful but decided against this as the templates and css were already setup and adjusted to work with Bootstrap5.
 
 Updated - The toasts issue has since been corrected by incorporating Bootstrap5 default Toast Javascript and HTML to enable any messages in relation to the views.py page to render these Toast card messaged where they are applicable. I edited the HTML layout to suit the applications needs and in this instance are simplified to show text. Further research would be useful to use them to their full extent with images and design.
-
-5)
 
 
 ## Account creation
