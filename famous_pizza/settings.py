@@ -28,7 +28,6 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['famous-pizza.herokuapp.com', 'localhost']
 
-
 # Application definition
 
 INSTALLED_APPS = [

@@ -2,8 +2,6 @@ from django.shortcuts import render
 from .models import Deals
 
 
-
-
 def deals(request):
     all_deals = Deals.objects.all()
 
