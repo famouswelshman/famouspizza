@@ -1,1 +1,1 @@
-web: gunicorn famous-pizza.wsgi:application
+web: gunicorn famous_pizza.wsgi:application
