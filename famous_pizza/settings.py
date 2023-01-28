@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'i6gt2KVrIQ37WQe/AYg4leiSwZBxVvoFam0V3LOi')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['famous-pizza.herokuapp.com', 'localhost']
 
